@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.18)  27 APR 2025 12:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.18)  27 APR 2025 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -122,13 +122,39 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-ge
 neric.tex)
 (/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-pd
-ftex.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ftex.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/textpos/textpos.sty
+Package: textpos 2022/07/23 v1.10.1
+Package textpos Info: choosing support for LaTeX3 on input line 60.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks25
 )
+\TP@textbox=\box53
+\TP@holdbox=\box54
+\TPHorizModule=\dimen160
+\TPVertModule=\dimen161
+\TP@margin=\dimen162
+\TP@absmargin=\dimen163
+
+Grid set 16 x 16 = 38.39343pt x 49.68562pt
+\TPboxrulesize=\dimen164
+\TP@ox=\dimen165
+\TP@oy=\dimen166
+\TP@tbargs=\toks26
+TextBlockOrigin set to 0pt x 0pt
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip52
+\enit@outerparindent=\dimen167
+\enit@toks=\toks27
+\enit@inbox=\box55
+\enit@count@id=\count281
+\enitdp@description=\count282
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
 (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
@@ -143,15 +169,15 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen160
-\Gin@req@width=\dimen161
+\Gin@req@height=\dimen168
+\Gin@req@width=\dimen169
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen162
-\WF@size=\dimen163
-\c@WF@wrappedlines=\count281
-\WF@box=\box53
-\WF@everypar=\toks26
+\wrapoverhang=\dimen170
+\WF@size=\dimen171
+\c@WF@wrappedlines=\count283
+\WF@box=\box56
+\WF@everypar=\toks28
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty
@@ -199,19 +225,19 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count282
+\c@section@level=\count284
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count283
+\etb@tempcnta=\count285
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen164
-\Hy@linkcounter=\count284
-\Hy@pagecounter=\count285
+\@linkdim=\dimen172
+\Hy@linkcounter=\count286
+\Hy@pagecounter=\count287
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
@@ -221,7 +247,7 @@ Now handling font encoding PD1 ...
 (/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count286
+\Hy@SavedSpaceFactor=\count288
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
@@ -236,9 +262,9 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count287
+\c@Hy@tempcnt=\count289
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen165
+\XeTeXLinkMargin=\dimen173
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -247,9 +273,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count288
-\Field@Width=\dimen166
-\Fld@charsize=\dimen167
+\Fld@menulength=\count290
+\Field@Width=\dimen174
+\Fld@charsize=\dimen175
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -262,9 +288,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count289
-\c@Item=\count290
-\c@Hfootnote=\count291
+\Hy@abspage=\count291
+\c@Item=\count292
+\c@Hfootnote=\count293
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -276,8 +302,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count292
-\c@bookmark@seq@number=\count293
+\Fld@listcount=\count294
+\c@bookmark@seq@number=\count295
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
@@ -288,48 +314,54 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip52
+\Hy@SectionHShift=\skip53
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-03-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count294
+\l__color_backend_stack_int=\count296
 )
 No file resume.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported  on input line 13.
-LaTeX Info: Redefining \degres on input line 13.
-LaTeX Info: Redefining \up on input line 13.
+(babel)             Reported  on input line 17.
+LaTeX Info: Redefining \degres on input line 17.
+Package french.ldf Info: Setting StandardItemizeEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 17.
+Package french.ldf Info: Setting StandardEnumerateEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 17.
+LaTeX Info: Redefining \up on input line 17.
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count295
-\scratchdimen=\dimen168
-\scratchbox=\box54
-\nofMPsegments=\count296
-\nofMParguments=\count297
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count298
-\MPscratchDim=\dimen169
-\MPnumerator=\count299
-\makeMPintoPDFobject=\count300
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count297
+\scratchdimen=\dimen176
+\scratchbox=\box57
+\nofMPsegments=\count298
+\nofMParguments=\count299
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count300
+\MPscratchDim=\dimen177
+\MPnumerator=\count301
+\makeMPintoPDFobject=\count302
+\everyMPtoPDFconversion=\toks30
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -342,6 +374,7 @@ e
 \providecommand\hyper@newdestlabel[2]{}
 (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2024/06/23 v1.3e Standard LaTeX Color (DPC)
+LaTeX Info: Redefining \color on input line 88.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
@@ -349,55 +382,80 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 13.
+Package hyperref Info: Link coloring ON on input line 17.
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-<avatar.png, id=4, 1201.48875pt x 1284.8pt>
-File: avatar.png Graphic file (type png)
-<use avatar.png>
-Package pdftex.def Info: avatar.png  used on input line 23.
-(pdftex.def)             Requested size: 74.48851pt x 79.65285pt.
 LaTeX Font Info:    Trying to load font information for U+fontawesometwo on inp
-ut line 33.
+ut line 25.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
 LaTeX Font Info:    Trying to load font information for U+fontawesomeone on inp
-ut line 34.
+ut line 29.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome/ufontawesomeone.fd
 File: ufontawesomeone.fd 2016/05/22 Font definitions for U/fontawesomeone.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 31--39
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 32.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 32.
+
+Underfull \hbox (badness 7704) in paragraph at lines 35--38
+\T1/cmr/m/n/10 vol-ley-ball player, I gra-
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 35--38
+\T1/cmr/m/n/10 dua-ted from the Olym-pic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--38
+\T1/cmr/m/n/10 re-serve sports school. I
+ []
+
+
+Underfull \hbox (badness 4569) in paragraph at lines 35--38
+\T1/cmr/m/n/10 also gra-dua-ted from the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--38
+
+ []
+
+<avatar.png, id=9, 1201.48875pt x 1284.8pt>
+File: avatar.png Graphic file (type png)
+<use avatar.png>
+Package pdftex.def Info: avatar.png  used on input line 41.
+(pdftex.def)             Requested size: 71.20235pt x 76.12405pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--46
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
-
+Overfull \hbox (24.13162pt too wide) in paragraph at lines 21--47
+[]$[]$ $[]$$[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
+Package enumitem Warning: Negative labelwidth. This does not make much
+(enumitem)                sense, on input line 49.
 
- []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 85.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 85.
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--128
+Underfull \hbox (badness 10000) in paragraph at lines 118--120
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 137.
+(Font)              <9> on input line 129.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 137.
+(Font)              <6> on input line 129.
 
 
 [1
@@ -415,30 +473,29 @@ L3 programming layer <2025-03-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12449 strings out of 469626
- 197856 string characters out of 5471010
- 604046 words of memory out of 5000000
- 39121 multiletter control sequences out of 15000+600000
- 638386 words of font info for 60 fonts, out of 8000000 for 9000
+ 12896 strings out of 469626
+ 205740 string characters out of 5471010
+ 615441 words of memory out of 5000000
+ 39560 multiletter control sequences out of 15000+600000
+ 637878 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,258b,623s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,6n,79p,251b,703s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome/FontAwesom
-e.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.p
-fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc0900.pfb></usr
-/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/l
-ocal/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/loc
-al/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local
-/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl0800.pfb></usr/local/t
-exlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl0900.pfb></usr/local/tex
-live/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb>
-Output written on resume.pdf (2 pages, 1929372 bytes).
+e.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.
+pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pf
+b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb>
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc0900.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl0900.pfb></usr/local/
+texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb></usr/local/te
+xlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on resume.pdf (2 pages, 1913361 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 91 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  3 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

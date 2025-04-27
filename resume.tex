@@ -4,6 +4,10 @@
 \usepackage[english,french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{fontawesome}
+
+\usepackage[absolute]{textpos} % Подключите пакет
+\usepackage{enumitem}
+
 \usepackage{graphicx,wrapfig}
 \usepackage{url}
 \usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue,
@@ -11,102 +15,92 @@ citecolor=blue, urlcolor=blue]{hyperref}
 \pdfcompresslevel=9
 
 \begin{document}
-{\sc \Large Grishin Anton --- Junior developer \\}
+{\sc \Large Grishin Anton --- Backend Developer \\}
 
 \begin{resume}
+  \begin{minipage}[H]{0.52\textwidth}
+    \section{\mysidestyle Personal\\Information}
+    Grishin Anton \\
+    Moscow, Russia \\
+    \faLinkedin \space
+    \href{https://www.linkedin.com/in/anton-grishin-6966a8362/}{\texttt{anton-grishin}}
+    \\
+    \faGithub  \space \href{https://github.com/alchemmist/}{\texttt{alchemmist}} \\
+    \faPaperPlane \space \href{https://t.me/alchemmist}{\texttt{@alchemmist}} \\
+    \faPhone \space \href{tel:+1234567890}{\color{blue}\texttt{+7(915)067-2638}}  \\
+    \faEnvelope \space \href{mailto:anton.ingrish@gmail.com}{\color{blue}\texttt{anton.ingrish@gmail.com}}
+  \end{minipage}
+  \begin{minipage}[H]{0.28\textwidth}
+    \section{\mysidestyle About me }
+    I am a former professional volleyball player, I graduated from the
+    Olympic reserve sports school. I also graduated from the
+    engineering class at school. \\
+  \end{minipage}%
+  \begin{minipage}[H]{0.25\textwidth}
+      \hspace{5mm}
+      \includegraphics[width=0.65\textwidth]{avatar.png}
+      \\
+    % \begin{textblock}{7}(4.9, 1.55)
+    %   \includegraphics[width=0.27\textwidth]{avatar.png}
+    % \end{textblock}
+  \end{minipage}
 
-  % === PICTURE ===
-
-  \begin{wrapfigure}{R}{0.17\textwidth}
-    \vspace{-0.9cm}
-    \begin{center}
-      \includegraphics[width=0.17\textwidth]{avatar.png}
-    \end{center}
-    \vspace{-1cm}
-  \end{wrapfigure}
-
-  % === PERSONAL INFO ===
-
-  \section{\mysidestyle Personal\\Information}
-  Grishin Anton \\
-  Moscow, Russia \\
-  \faGithub  \space \href{https://github.com/alchemmist/}{@alchemmist} \\
-  \faPaperPlane \space \href{https://t.me/alchemmist}{@alchemmist} \\
-  \faLinkedin \space
-  \href{https://www.linkedin.com/in/anton-grishin-6966a8362/}{anton-grishin} \\
-  \faPhone \space +79150672638 \\
-  \faEnvelope \space anton.ingrish@gmail.com \\
-
-  % === OBJECTIVE ===
-
-  \section{\mysidestyle About me}
-  Improve the efficiency of the microwave and RF designers and
-  structures. I focus on nonlinear devices at circuits level (such as
-  HEMTs transistors) and at system level (HPA, Switches). That
-  purpose requires an original use of an advanced RF instrumentation
-  associated to a strong knowledge in terms of measured devices modeling.
-
-  % === SKILLS ===
-
-  \section{\mysidestyle Skills}\vspace{2mm}
-  \begin{description}
-    \item[Operating systems:] Unix, Linux and Windows
-    \item[Programming languages:] Python, Go, JavaScript, WebTech (HTML, CSS).
-    \item[Office softwares:] Latex, Microsoft Office, Libree Office.
+  \section{\mysidestyle Skills}
+  \begin{description}[leftmargin=0pt, itemindent=*]
+    \item[Python:] FastAPI, Flask, SqlAlchemy, python-telegram-bot,
+      faststream, numpy, pandas.
+    \item[Go] FastAPI, Flask, SqlAlchemy, python-telegram-bot,
+      faststream, numpy, pandas.
+    \item[Databases] Postgres, sqlite, Redis, S3(Yandex Object Storage).
+    \item[Message brokers:] RebbitMQ, Kafka, Mosquitto.
+    \item[Other techonologies:] SQL, Java, JavaScript, Rust, Latex, Go.
     \item[Scientific softwares] Comsys, Maple, Matlab, Mathematica,
       Scilab, Keysight's VEE and ADS, NI LabVIEW.
-    \item[Characterization tools:] Spectrum analyzers, scopes, AWG,
-      VNA, LSNA, probe stations, high impedance probes. I have
-      developed calibration procedures and automated calibration and
-      measurements processes.
-    \item[System Level Modeling:] Amplifiers, modulators and mixers
-      with splines, neural networks or Volterra expansions. Bilateral
-      Modeling by PhD model.
-    \item[Circuit Level Modeling:] Linear, nonlinear and
-      electrothermal models of HEMTs.
-    \item[Languages:] French, English.
+    \item[Dev tools:] Neovim, Docker, docker-compose, docker-swarm,
+      CI/CD(Github actions, GitLab actions)
+    \item[Languages:] Russian, English.
   \end{description}
 
-  % === EDUCATION ===
-
   \section{\mysidestyle Education}
-  Central University - Mathematics and Computer Science, 2028 \\
-
-  % === CERTIFICATIONS ===
+  Central University - Mathematics and Computer Science, 2028
 
   \section{\mysidestyle Certifications}
-  \textbf{National Instruments} Certified LabVIEW Associate Developer
-  (CLAD) \hfill \textsl{July 2014-July 2016}\\
+  \textbf{Yandex Lyceum.} I was externally admitted directly into the
+  second year of the Yandex Academy Lyceum's Industrial Development
+  course. I earned a honors certificate and achieved a perfect score
+  of 100/100 on the final project.
+  \vspace{-6mm}
 
-  % === AWARDS ===
+  \hfill \textsl{September 2022 - April 2023}
 
-  \section{\mysidestyle Awards}\vspace{4mm}
-  \begin{list2}
-  \item \textbf{Best Paper Award}, European Microwave Week - Galium
-    Arsenide Application Symposium (GAAS), 2002 \\
-    \textsl{\footnotesize{T. Reveyrand, C. Maziere, J.M. N\'ebus, R.
-        Qu\'er\'e, A. Mallet, L. Lapierre, J. Sombrin, ``A calibrated
-        time domain envelope measurement system for the behavioral
-        modeling of power amplifiers'', European Microwave Week, GAAS
-    2002, pp. 237-240, Milano, September 2002}}
-    \vspace{1mm}
-  \item \textbf{Best Student Paper Award}, Journ\'ees Nationales
-    Micro-ondes (JNM), 2007 \\
-    \textsl{\footnotesize{
-        O. Jardel, F. De Groote, T. Reveyrand, C. Charbonniaud, J.P.
-        Teyssier, R. Qu\'er\'e, D. Floriot, ``Mod\'elisation du drain-lag
-        dans les mod\`eles \'electriques grand-signaux de transistors
-        HEMTs AlGaN/GaN'', 15eme Journ\'ees Nationales Micro-ondes
-    (JNM),3C1, Toulouse, Mai 2007.}}
-  \end{list2}
+  \section{\mysidestyle Achievements}
+  \textbf{Qualified for the finals of the Russian Competitive
+  Programming Championship}, where our team designed a microservice
+  architecture for a web app aggregating sports events across Russia
+  (tech stack: RabbitMQ (FastStream), FastAPI, React, Kafka, OAuth)
+  and developed an algorithm for processing and validating annual
+  government reports on sports events.
+  \vspace{-6mm}
 
-  Up to 130 other refrences are available here : \\
-  \vspace{-8mm}
+  \hfill \textsl{November 2024}
 
-  \href{http://www.microwave.fr/publications.html}{http://www.microwave.fr/publications.html}
-  %\vspace{-1mm}
+  \textbf{Participated in the Nuclear IT Hackathon}, where my team
+  and I worked on a Rosatom case to develop a service for determining
+  the emotional tone of online meeting statements. I created
+  prototypes and implemented the frontend on React, while my team
+  trained the model.
+  \vspace{-6mm}
 
-  % === INTERESTINGS ===
+  \hfill \textsl{April 2024}
+
+  \textbf{I won the Science for Life scientific-practical
+  conference} with a smart home project for private and public
+  educational institutions (tech stack: Redis, Zigbee2MQTT,
+  websockets, Go, Python, Flask, React).
+  \vspace{-6mm}
+
+  \hfill \textsl{June 2024}
+
   \section{\mysidestyle Interestings}\vspace{2mm}
   \begin{description}
     \item[Philosophy] Unix, Linux and Windows
@@ -119,9 +113,7 @@ citecolor=blue, urlcolor=blue]{hyperref}
 
   \section{\mysidestyle History}\vspace{2mm}
 
-
   \begin{description}
-
 
     \item[Measurement Engineer (CNRS)]\small{XLIM \hfill \textsl{June
       2016-Present}}\\
@@ -142,7 +134,6 @@ citecolor=blue, urlcolor=blue]{hyperref}
       \end{list2}
       \vspace{2mm}
 
-
     \item[Measurement Engineer (CNRS)]\small{XLIM \hfill
       \textsl{December 2007-May 2013}}\\
       Achievements:
@@ -159,7 +150,6 @@ citecolor=blue, urlcolor=blue]{hyperref}
         high impedance probe in both frequency (VNA) and time domain (LSNA)}
       \end{list2}
       \vspace{2mm}
-
 
     \item[Research Associate - Visiting Scholar]\small{University of
       Colorado at Boulder \hfill \textsl{February 2012-July 2012}}\\
@@ -183,7 +173,6 @@ citecolor=blue, urlcolor=blue]{hyperref}
         \end{list2}
         \vspace{2mm}
 
-
       \item[Research Engineer]\small{NMDG Engineering bvba \hfill
         \textsl{November 2004-February 2005}}\\
         Implementation of the High Impedance Probe module
@@ -192,14 +181,12 @@ citecolor=blue, urlcolor=blue]{hyperref}
 
         \vspace{2mm}
 
-
       \item[Postdoctoral scientist]\small{CNES (French Space Agency)
         \hfill \textsl{October 2003-September 2004}}\\
         Development of characterization tools interfaces within the
         free open-source scientific package Scilab
 
         \vspace{2mm}
-
 
       \item[Postdoctoral scientist]\small{CNES (French Space Agency)
         \hfill \textsl{October 2002-September 2003}}\\
@@ -216,7 +203,6 @@ citecolor=blue, urlcolor=blue]{hyperref}
         \end{list2}
         \vspace{2mm}
 
-
       \item[Researcher]\small{IRCOM / University of Limoges \hfill
         \textsl{October 1998-September 2002}}\\
         Achievements:
@@ -232,13 +218,11 @@ citecolor=blue, urlcolor=blue]{hyperref}
         \end{list2}
         \vspace{2mm}
 
-
       \item[Lecturer]\small{University of Limoges \hfill
         \textsl{October 1998-September 2002}}\\
         RF devices, analog/digital communication systems, signal
         processing, propagation waves...
         \vspace{2mm}
-
 
       \item[Postgraduate student]\small{IRCOM / University of Limoges
         \hfill \textsl{February 1998-July 1998}}\\
@@ -246,7 +230,6 @@ citecolor=blue, urlcolor=blue]{hyperref}
         optimize the trade-off between linearity and efficiency
 
     \end{description}
-
 
   \end{resume}
   \end{document}
