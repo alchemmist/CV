@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.18)  27 APR 2025 17:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.18)  27 APR 2025 18:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -385,11 +385,11 @@ Package color Info: Driver file: pdftex.def on input line 149.
 Package hyperref Info: Link coloring ON on input line 17.
 
 Underfull \hbox (badness 10000) in paragraph at lines 18--19
-
+ 
  []
 
 LaTeX Font Info:    Trying to load font information for U+fontawesometwo on inp
-ut line 25.
+ut line 24.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
@@ -399,63 +399,29 @@ ut line 29.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome/ufontawesomeone.fd
 File: ufontawesomeone.fd 2016/05/22 Font definitions for U/fontawesomeone.
 )
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 32.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 32.
-
-Underfull \hbox (badness 7704) in paragraph at lines 35--38
-\T1/cmr/m/n/10 vol-ley-ball player, I gra-
- []
-
-
-Underfull \hbox (badness 1237) in paragraph at lines 35--38
-\T1/cmr/m/n/10 dua-ted from the Olym-pic
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--38
-\T1/cmr/m/n/10 re-serve sports school. I
- []
-
-
-Underfull \hbox (badness 4569) in paragraph at lines 35--38
-\T1/cmr/m/n/10 also gra-dua-ted from the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--38
-
- []
-
 <avatar.png, id=9, 1201.48875pt x 1284.8pt>
 File: avatar.png Graphic file (type png)
 <use avatar.png>
-Package pdftex.def Info: avatar.png  used on input line 41.
-(pdftex.def)             Requested size: 71.20235pt x 76.12405pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--46
-
- []
-
-
-Overfull \hbox (24.13162pt too wide) in paragraph at lines 21--47
-[]$[]$ $[]$$[]$ 
- []
+Package pdftex.def Info: avatar.png  used on input line 39.
+(pdftex.def)             Requested size: 72.56473pt x 77.59439pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 41.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 41.
 
 
 Package enumitem Warning: Negative labelwidth. This does not make much
-(enumitem)                sense, on input line 49.
+(enumitem)                sense, on input line 48.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--120
+Underfull \hbox (badness 10000) in paragraph at lines 117--119
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 129.
+(Font)              <9> on input line 128.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 129.
+(Font)              <6> on input line 128.
 
 
 [1
@@ -473,26 +439,26 @@ L3 programming layer <2025-03-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12896 strings out of 469626
- 205740 string characters out of 5471010
- 615441 words of memory out of 5000000
- 39560 multiletter control sequences out of 15000+600000
- 637878 words of font info for 60 fonts, out of 8000000 for 9000
+ 12898 strings out of 469626
+ 205800 string characters out of 5471010
+ 614441 words of memory out of 5000000
+ 39562 multiletter control sequences out of 15000+600000
+ 637877 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,79p,251b,703s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,7n,79p,251b,701s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome/FontAwesom
 e.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pf
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></
 usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc0900.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/
+r/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/loca
 l/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl0900.pfb></usr/local/
 texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb></usr/local/te
 xlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on resume.pdf (2 pages, 1913361 bytes).
+Output written on resume.pdf (2 pages, 1912447 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream
