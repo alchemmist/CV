@@ -1,5 +1,4 @@
 name: build
-
 on:
   push:
     branches:
@@ -7,14 +6,21 @@ on:
   pull_request:
     branches:
       - main
-
 jobs:
   make:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: build
+      - name: Install LaTeX, Russian, FontAwesome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            latexmk \
+            texlive-latex-base \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-lang-cyrillic \
+            texlive-fonts-extra
+      - name: Build PDF
         run: make build
