@@ -5,7 +5,8 @@
 ![Forks](https://img.shields.io/github/forks/alchemmist/CV?style=flat)
 ![License](https://img.shields.io/github/license/alchemmist/CV?style=flat)
 ![Contributors](https://img.shields.io/github/contributors/alchemmist/CV?style=flat)
-![Static Badge](https://img.shields.io/badge/4.86-default?label=latexmk)
+![Latexmk](https://img.shields.io/badge/4.86-default?label=latexmk)
+[![Build](https://github.com/alchemmist/CV/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/alchemmist/CV/actions/workflows/build.yaml)
 
 This is my Curriculum Vita (CV) as a software engineer. I have two versions of CV ([english](/pdf/english.pdf) and [russian](/pdf/russian.pdf)) already rednered in [`pdf`](/pdf) directory. This repo have MIT license, so you can use it as a template for your CV or or whatever you want.
 
@@ -36,6 +37,7 @@ citecolor=blue, urlcolor=blue]{hyperref}
 ### Building
 
 You can build it with make:
+
 ```sh
 make build
 ```
@@ -47,5 +49,5 @@ After that in `pdf` directory wil be build a pdf version of all `.tex` files in 
 If you have questions about this repo or you want to contribute, [text me](https://t.me/alchemmist)!
 
 ### Demo
-<img src="./images/demo.png" alt="Favicon Preview"  style="margin-bottom: 10px">
 
+<img src="./images/demo.png" alt="Favicon Preview"  style="margin-bottom: 10px">
