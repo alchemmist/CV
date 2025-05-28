@@ -1,6 +1,4 @@
-<span style="display: flex">
-    <img src="./images/logo.svg" alt="Favicon Preview" width="85"  style="margin-bottom: 10px"><h2>Resume (CV)</h2>
-</span>
+<h2><img src="./images/logo.svg" alt="Favicon Preview" width="85" align="center"> Resume (CV)</h2>
 
 ![Last commit](https://img.shields.io/github/last-commit/alchemmist/CV?style=flat)
 ![Stars](https://img.shields.io/github/stars/alchemmist/CV?style=flat)
