@@ -52,3 +52,6 @@ If you have questions about this repo or you want to contribute, [text me](https
 ### Demo
 
 <img src="./images/demo.png" alt="Favicon Preview"  style="margin-bottom: 10px">
+
+### License
+Licensed under of The [MIT](./LICENSE) License.
