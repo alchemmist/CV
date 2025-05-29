@@ -1,5 +1,6 @@
 <h2><img src="./images/logo.svg" alt="Favicon Preview" width="85" align="center"> Resume (CV)</h2>
 
+[![Github](https://img.shields.io/badge/alchemmist%2FCV-blue?logo=github&label=github&color=blue)](https://github.com/alchemmist/CV)
 ![Last commit](https://img.shields.io/github/last-commit/alchemmist/CV?style=flat)
 ![Stars](https://img.shields.io/github/stars/alchemmist/CV?style=flat)
 ![Forks](https://img.shields.io/github/forks/alchemmist/CV?style=flat)

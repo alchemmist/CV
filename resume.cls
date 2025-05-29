@@ -810,15 +810,13 @@
 %           and res.cls class by Michael DeCorte.
 %           I have merged these for educational purposes only.
 
-\oddsidemargin -11mm
+\oddsidemargin 2mm
 \evensidemargin -11mm
-%\textwidth=150mm
-\textwidth=154mm
+\textwidth=145mm
 \itemsep=0cm
 \parsep=0cm
-\topmargin -12mm
-%\textheight 265mm
-\textheight 275mm
+\topmargin=-12mm
+\textheight=275mm
 
 \newenvironment{list1}{
   \begin{list}{\ding{113}}{%
@@ -841,11 +839,26 @@
 \newcommand{\myheadingstyle}{\sl}
 \newcommand{\mysubheadingstyle}{\sl}
 
+\RequirePackage{xcolor}
+\RequirePackage{eso-pic}
 
+% Цвет и ширина боковой полосы
+% \definecolor{sidebarcolor}{RGB}{10,50,90} % deep blue - as yegor
+% \definecolor{sidebarcolor}{RGB}{106,123,140} % grey - norm
+% \definecolor{sidebarcolor}{RGB}{51,51,51} % black - nice!
+% \definecolor{sidebarcolor}{RGB}{70,130,180} % sky blue - dont know
+% \definecolor{sidebarcolor}{RGB}{108,26,54} % purple
+\definecolor{sidebarcolor}{RGB}{47,79,79} % forest - nice
 
+\newlength\SidebarWidth
+\setlength\SidebarWidth{2cm}
 
-
-
-
+% Рисуем полосу на фоне каждой страницы
+\AddToShipoutPictureBG{%
+  \put(-3cm,0){%
+    \color{sidebarcolor}%
+    \rule{\SidebarWidth}{\paperheight}%
+  }%
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
