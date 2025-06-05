@@ -861,4 +861,33 @@
   }%
 }
 
+\usepackage{tcolorbox}
+\tcbuselibrary{listings, skins}
+\newcommand\mystrut{\rule[-2pt]{0pt}{1em}}
+\newtcbox{\inlinecode}{on line,
+  box align=base,
+  colback=gray!20,
+  colframe=gray!0,
+  boxrule=0.5pt,
+  arc=3pt,
+  outer arc=3pt,
+  boxsep=1pt,
+  left=2pt,
+  right=2pt,
+  top=1pt,
+  bottom=1pt,
+  fontupper=\ttfamily\small\mystrut
+}
+
+\usepackage[absolute]{textpos}
+\usepackage{enumitem}
+
+\usepackage{graphicx,wrapfig}
+\usepackage{url}
+\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue,
+citecolor=blue, urlcolor=blue]{hyperref}
+\pdfcompresslevel=9
+\usepackage{xcolor}
+\usepackage{eso-pic}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
