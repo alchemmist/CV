@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: build-pdf-before-commit
+        name: Build PDF
+        entry: make precommit
+        language: system
+        pass_filenames: false
