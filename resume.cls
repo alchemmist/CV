@@ -788,8 +788,6 @@
   \parsep 2pt plus 2pt
 \itemsep \parsep}
 
-\pagestyle{empty}  % don't want page numbers
-
 \begin{format}
   \title{l}\employer{r}\\
   \location{l}\dates{r}\\
@@ -810,13 +808,25 @@
 %           and res.cls class by Michael DeCorte.
 %           I have merged these for educational purposes only.
 
+\pagestyle{empty}
+\footskip=10pt
 \oddsidemargin 2mm
 \evensidemargin -11mm
 \textwidth=145mm
 \itemsep=0cm
 \parsep=0cm
 \topmargin=-12mm
-\textheight=275mm
+\textheight=257mm
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\rfoot{\begingroup
+  \hypersetup{urlcolor=gray!40, linkcolor=gray!30, citecolor=gray!30}
+  \href{https://github.com/alchemmist/CV}{Open~Source\,\faGithub}
+\endgroup}
 
 \newenvironment{list1}{
   \begin{list}{\ding{113}}{%
@@ -834,7 +844,6 @@
   \setlength{\leftmargin}{0.25in}}}{
 \end{list}}
 
-%\newcommand{\mysidestyle}{\footnotesize\sc}
 \newcommand{\mysidestyle}{\small\sc}
 \newcommand{\myheadingstyle}{\sl}
 \newcommand{\mysubheadingstyle}{\sl}
@@ -889,5 +898,11 @@ citecolor=blue, urlcolor=blue]{hyperref}
 \pdfcompresslevel=9
 \usepackage{xcolor}
 \usepackage{eso-pic}
+
+\usepackage{calc} % для вычислений ширины
+
+\newcommand{\fillwithline}{%
+  \raisebox{0.5ex}{\rule[0.5ex]{\widthof{~}}{0.4pt}}%
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

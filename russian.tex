@@ -5,20 +5,14 @@
 \usepackage[T1]{fontenc}
 \usepackage{fontawesome}
 
-\usepackage{calc} % для вычислений ширины
-
-\newcommand{\fillwithline}{%
-  \raisebox{0.5ex}{\rule[0.5ex]{\widthof{~}}{0.4pt}}%
-}
-
 % TODO: добавить схему микросервсиной архитектуры с хакатона как пруф
 % TODO: сделать автовыраваниване для фотки
 % TODO: возможно весь технический скилл написать?
 % TODO: сплющить проекты с одинаковым стеком технологий
 % TODO: про стартап нписать, поговорить с Марком чтоб его заопенсорсить
-% TODO: 
 
 \begin{document}
+
 {\sc \large Гришин Антон --- Backend разработчик} \\
 \begin{resume}
   \begin{minipage}[t]{0.55\textwidth}
@@ -36,11 +30,22 @@
     \faEnvelope \space
     \href{mailto:anton.ingrish@gmail.com}{\color{blue}\texttt{anton.ingrish@gmail.com}}
   \end{minipage}
+
   \begin{minipage}[H]{0.18\textwidth}
     \begin{textblock}{7}(10.79, 1.5)
       \includegraphics[width=0.27\textwidth]{images/avatar.png}
     \end{textblock}
   \end{minipage}
+
+  % \begin{textblock}{1}(12, 15.6)
+  %   {
+  %     \begingroup
+  %     \hypersetup{urlcolor=gray!30, linkcolor=gray!30, citecolor=gray!30}
+  %     \href{https://github.com/alchemmist/CV}{Open~Source\,\faGithub}
+  %     \endgroup
+  %   }
+  % \end{textblock}
+
   \section{\mysidestyle Обо мне}
   Я студент, начинающий разрботчик. Я программирую 4 года; за
   это время я участвовал в разработке 44 репозиториев, отправил 920
@@ -63,7 +68,7 @@
       \inlinecode{JavaScript}, \inlinecode{Rust}.
     \item[Dev tools:] \inlinecode{Docker}, \inlinecode{Podman},
       \inlinecode{Make}, \inlinecode{CI/CD}, \inlinecode{Linux}
-    \item[Languages:] Russian, English.
+    \item[Языки] Russian, English.
   \end{description}
 
   \section{\mysidestyle Образование}
@@ -81,17 +86,21 @@
   \hfill \textsl{Сентябрь 2022 - Апрель 2023}
 
   \section{\mysidestyle Достижения}
-  Прошёл в \textbf{финал Чемпионата России по спортивному
+  Прошёл в
+  \textbf{\href{https://github.com/alchemmist/CV/blob/main/attachments/russian-chemp-final.pdf}{финал}
+    Чемпионата России по спортивному
   программированию,} где разработал
   \href{https://github.com/alchemmist/CV/blob/main/attachments/architect.pdf}{микросервисную
   архитектуру} для
   \href{https://github.com/alchemmist/}{веб-приложения},
   агрегирующего спортивные события по
-  всей России. Технический стек: \inlinecode{RabbitMQ (FastStream)},
+  всей России. И разработал алгоритм обработки и проверки ежегодных
+  государственных
+  отчетов о спортивных мероприятиях. Технический стек:
+  \inlinecode{Kafka}, \inlinecode{React}, \\
+  \inlinecode{RabbitMQ (FastStream)},
   \inlinecode{FastAPI},
-\inlinecode{React}, \inlinecode{Kafka}, \inlinecode{OAuth}). И
-разработал алгоритм обработки и проверки ежегодных государственных
-отчетов о спортивных мероприятиях.
+\inlinecode{OAuth}).
 % TODO: вложить хакатон на github и добавить ссылку
 
 \vspace{-6mm}
@@ -100,13 +109,13 @@
 
 Я
 \textbf{\href{https://github.com/alchemmist/CV/blob/main/attachments/scince-for-life-win.pdf}{победитель}
-  научно-практической конференции
-  «\href{https://conf.profil.mos.ru/academ}{Наука для
-жизни}»} с \href{https://github.com/smart-cab/}{проектом умного
+научно-практической конференции}
+«\href{https://conf.profil.mos.ru/academ}{Наука для
+жизни}» с \href{https://github.com/smart-cab/}{проектом умного
 дома} для частных и государственных
-образовательных учреждений (технический стек: \inlinecode{Redis},
-  \inlinecode{Zigbee2MQTT}, \inlinecode{websockets}, \inlinecode{Go},
-\inlinecode{Python}, \inlinecode{Flask}, \inlinecode{React}).
+образовательных учреждений. Технический стек: \inlinecode{Redis},
+\inlinecode{Zigbee2MQTT}, \inlinecode{websockets}, \inlinecode{Go},
+\inlinecode{Python}, \inlinecode{Flask}, \inlinecode{React}.
 \vspace{-6mm}
 
 \hfill \textsl{Июнь 2024}
@@ -122,17 +131,15 @@ IT hack}}, где моя команда работала
 \textbf{\href{https://github.com/alchemmist/CV/blob/main/attachments/informatics-olimpic.pdf}{Призёр}
 3-й степени}, олимпиады МПГУ по информатике:
 «Прикладная информатика»
-
 \vspace{-3mm}
 
 \hfill \textsl{Июнь 2023}
 
-\section{\mysidestyle Interestings}\vspace{2mm}
+\section{\mysidestyle Интересы}\vspace{1mm}
 \begin{description}
-  \item[Formal verfification:] Coq
+  \item[Формальная верификация:] \inlinecode{Coq}
   \item[Linux:] Arch, Hyprland
 \end{description}
-
 \vfill
 % ------------------------------------------------------------------ %
 
@@ -147,8 +154,8 @@ IT hack}}, где моя команда работала
     \href{https://www.figma.com/design/8H1tFpxgmIDV1xp06ndi73/SmartCab?node-id=0-1&p=f}{протопипы}
     дизайна админ панели и интерфейса планшета управления
     (\textit{т.н. хаб}). Сверстал их
-    (\textit{\href{https://github.com/smart-cab/smartcab-hub/tree/main/frontend}{1},
-    \href{https://github.com/smart-cab/smartcab-dashboard/tree/main/frontend}{2}})
+    (\href{https://github.com/smart-cab/smartcab-hub/tree/main/frontend}{1},
+    \href{https://github.com/smart-cab/smartcab-dashboard/tree/main/frontend}{2})
     с использованием \inlinecode{React}.
     \href{https://github.com/smart-cab/smartcab-bot}{Написал бота}
     для администрирования системы.
@@ -183,8 +190,6 @@ IT hack}}, где моя команда работала
     \href{https://github.com/corpse-inc/corpse}{игровой движок} с
     архитектурой
     \href{https://en.wikipedia.org/wiki/Entity_component_system#:~:text=Entity%E2%80%93component%E2%80%93system%20(ECS,Entity%E2%80%93Component%E2%80%93System%20layout.}{ECS}
-      % для игр в жанре survival и top-down shooter. Вместе с движком
-      % была разработана демонастрационная sandbox игра о зомбиапокалипсисе.
 
       Технический стек:
       \begin{list2}
@@ -231,6 +236,38 @@ IT hack}}, где моя команда работала
       Прошёл курс по Python на Stepik и завершил его с
       \href{https://github.com/alchemmist/CV/blob/main/attachments/stepik-python-course.pdf}{отличием}.
 
-  \end{description}
-\end{resume}
-\end{document}
+    \item[Corpse]\small{Петпроект
+      \hfill \textsl{Ноябрь 2022 — Январь 2022\vspace{2mm}}}\\
+      Полнофункциональный модульный
+      \href{https://github.com/corpse-inc/corpse}{игровой движок} с
+      архитектурой
+      \href{https://en.wikipedia.org/wiki/Entity_component_system#:~:text=Entity%E2%80%93component%E2%80%93system%20(ECS,Entity%E2%80%93Component%E2%80%93System%20layout.}{ECS}
+
+        Технический стек:
+        \begin{list2}
+        \item{Язык: \inlinecode{Python}}
+        \item{Фреймворк: \inlinecode{Pygame}}
+        \item{Библиотеки: \inlinecode{esper}, \inlinecode{pytmx}}
+        \item{Инструменты работы с графикой: \inlinecode{aseprite},
+          \inlinecode{Tiled}}
+        \end{list2}
+
+      \item[Corpse]\small{Петпроект
+        \hfill \textsl{Ноябрь 2022 — Январь 2022\vspace{2mm}}}\\
+        Полнофункциональный модульный
+        \href{https://github.com/corpse-inc/corpse}{игровой движок} с
+        архитектурой
+        \href{https://en.wikipedia.org/wiki/Entity_component_system#:~:text=Entity%E2%80%93component%E2%80%93system%20(ECS,Entity%E2%80%93Component%E2%80%93System%20layout.}{ECS}
+
+          Технический стек:
+          \begin{list2}
+          \item{Язык: \inlinecode{Python}}
+          \item{Фреймворк: \inlinecode{Pygame}}
+          \item{Библиотеки: \inlinecode{esper}, \inlinecode{pytmx}}
+          \item{Инструменты работы с графикой: \inlinecode{aseprite},
+            \inlinecode{Tiled}}
+          \end{list2}
+
+      \end{description}
+    \end{resume}
+    \end{document}
