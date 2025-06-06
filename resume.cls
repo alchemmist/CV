@@ -237,7 +237,7 @@
 \def\@linename{\begingroup
   \def\\{, }
   {\namefont\@name}
-  \vskip 2pt
+  \vskip 10pt
   \fullline
   \vskip 2pt
   % where do you live?
@@ -823,10 +823,18 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\rfoot{\begingroup
-  \hypersetup{urlcolor=gray!40, linkcolor=gray!30, citecolor=gray!30}
+\lfoot{
+  \begingroup
+  \hypersetup{urlcolor=gray!40}
+  \href{https://t.me/alchemmist/}{\texttt{@alchemmist}}
+  \endgroup
+}
+\rfoot{
+  \begingroup
+  \hypersetup{urlcolor=gray!40}
   \href{https://github.com/alchemmist/CV}{Open~Source\,\faGithub}
-\endgroup}
+  \endgroup
+}
 
 \newenvironment{list1}{
   \begin{list}{\ding{113}}{%

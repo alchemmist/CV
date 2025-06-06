@@ -32,43 +32,41 @@
   \end{minipage}
 
   \begin{minipage}[H]{0.18\textwidth}
-    \begin{textblock}{7}(10.79, 1.5)
+    \begin{textblock}{7}(10.84, 1.7)
       \includegraphics[width=0.27\textwidth]{images/avatar.png}
     \end{textblock}
   \end{minipage}
 
-  % \begin{textblock}{1}(12, 15.6)
-  %   {
-  %     \begingroup
-  %     \hypersetup{urlcolor=gray!30, linkcolor=gray!30, citecolor=gray!30}
-  %     \href{https://github.com/alchemmist/CV}{Open~Source\,\faGithub}
-  %     \endgroup
-  %   }
-  % \end{textblock}
-
+  \vspace{-5mm}
   \section{\mysidestyle Обо мне}
   Я студент, начинающий разрботчик. Я программирую 4 года; за
-  это время я участвовал в разработке 44 репозиториев, отправил 920
+  это время я участвовал в разработке 44 репозиториев, отправил 921
   комитов и написал
-  240412 строчек кода. В прошлом профессиональный
+  176729 строчек кода. В прошлом профессиональный
   \href{https://github.com/alchemmist/CV/blob/main/attachments/sport.pdf}{волейболист}.
 
   \section{\mysidestyle Навыки}
+
+  \vspace{0.5mm}
+
   \begin{description}[leftmargin=0pt, itemindent=*]
-    \item[Python:] \inlinecode{FastAPI}, \inlinecode{Flask},
-      \inlinecode{SqlAlchemy}, \inlinecode{python-telegram-bot},
-      \inlinecode{faststream}, \inlinecode{PyQt}.
-    \item[Go] \inlinecode{http}, \inlinecode{grpc},
+    \item[Python:] \hangindent=9mm \hangafter=1
+      \inlinecode{FastAPI}, \inlinecode{pydantic},
+      \inlinecode{Flask},
+      \inlinecode{SqlAlchemy}, \inlinecode{faststream},
+      \inlinecode{alembic}, \inlinecode{pytest}.
+    \item[Go:] \inlinecode{http}, \inlinecode{grpc},
       \inlinecode{protobuf}, \inlinecode{tgbotapi},
       \inlinecode{reflect}, \inlinecode{gofsm}.
-    \item[Databases] \inlinecode{postgres}, \inlinecode{sqlite},
+    \item[Databases:] \inlinecode{postgres}, \inlinecode{sqlite},
       \inlinecode{redis}, \inlinecode{Yandex Object Storage}.
     \item[Message brokers:] \inlinecode{RebbitMQ}, \inlinecode{Mosquitto}.
     \item[Other techonologies:] \inlinecode{SQL}, \inlinecode{Java},
-      \inlinecode{JavaScript}, \inlinecode{Rust}.
+      \inlinecode{JavaScript}, \inlinecode{bash}.
     \item[Dev tools:] \inlinecode{Docker}, \inlinecode{Podman},
-      \inlinecode{Make}, \inlinecode{CI/CD}, \inlinecode{Linux}
-    \item[Языки] Russian, English.
+      \inlinecode{Make}, \inlinecode{CI/CD}, \inlinecode{Linux},
+      \inlinecode{Git}
+    \item[Языки:] Russian, English.
   \end{description}
 
   \section{\mysidestyle Образование}
@@ -81,9 +79,17 @@
   Академии Яндекси} по Промышленной разработке и окончил его с
   \href{https://github.com/alchemmist/CV/blob/main/attachments/yandex-lyceum.pdf}{аттестатом
   с отличием}, сдав финальный проект на 100/100 баллов.
+
   \vspace{-6mm}
 
   \hfill \textsl{Сентябрь 2022 - Апрель 2023}
+
+  \textbf{Курс Python}. Прошёл курс по Python на Stepik и завершил его с
+  \href{https://github.com/alchemmist/CV/blob/main/attachments/stepik-python-course.pdf}{отличием}.
+
+  \vspace{-3mm}
+
+  \hfill \textsl{Сентябрь 2021 - Апрель 2022}
 
   \section{\mysidestyle Достижения}
   Прошёл в
@@ -92,7 +98,7 @@
   программированию,} где разработал
   \href{https://github.com/alchemmist/CV/blob/main/attachments/architect.pdf}{микросервисную
   архитектуру} для
-  \href{https://github.com/alchemmist/}{веб-приложения},
+  \href{https://github.com/alchemmist/sportporg}{веб-приложения},
   агрегирующего спортивные события по
   всей России. И разработал алгоритм обработки и проверки ежегодных
   государственных
@@ -105,7 +111,7 @@
 
 \vspace{-6mm}
 
-\hfill \textsl{Ноябрь 2024}
+\hfill \textsl{Декабрь 2024}
 
 Я
 \textbf{\href{https://github.com/alchemmist/CV/blob/main/attachments/scince-for-life-win.pdf}{победитель}
@@ -118,7 +124,7 @@
 \inlinecode{Python}, \inlinecode{Flask}, \inlinecode{React}.
 \vspace{-6mm}
 
-\hfill \textsl{Июнь 2024}
+\hfill \textsl{Апрель 2024}
 
 \textbf{Учстник хакаотна \href{https://nuclearhack.mephi.ru/}{Nuclear
 IT hack}}, где моя команда работала
@@ -137,38 +143,53 @@ IT hack}}, где моя команда работала
 
 \section{\mysidestyle Интересы}\vspace{1mm}
 \begin{description}
-  \item[Формальная верификация:] \inlinecode{Coq}
+  \item[Формальная верификация:] Прохожу курс
+    \texttt{\href{https://softwarefoundations.cis.upenn.edu}{softwarefoundations}}
+    на \inlinecode{Coq}.
   \item[Linux:] Arch, Hyprland
 \end{description}
 \vfill
 % ------------------------------------------------------------------ %
 
-\section{\mysidestyle Опыт}\vspace{2mm}
+\section{\mysidestyle Петпроекты}\vspace{2mm}
 
 \begin{description}
 
-  \item[SmartCab]\small{Петпроект \hfill
-    \textsl{November 2004 — February 2005}}\\
-    \href{https://github.com/smart-cab}{Система умного дома} для
-    частных и государственных образовательных учереждений. Разработал
+  \item[SmartCab]\small{\href{https://github.com/smart-cab}{Система
+      умного дома} \hfill
+    \textsl{Сентябрь 2023 — Май 2024\vspace{2mm}}}\\
+    Разработал
     \href{https://www.figma.com/design/8H1tFpxgmIDV1xp06ndi73/SmartCab?node-id=0-1&p=f}{протопипы}
     дизайна админ панели и интерфейса планшета управления
-    (\textit{т.н. хаб}). Сверстал их
-    (\href{https://github.com/smart-cab/smartcab-hub/tree/main/frontend}{1},
-    \href{https://github.com/smart-cab/smartcab-dashboard/tree/main/frontend}{2})
-    с использованием \inlinecode{React}.
+    (\textit{т.н. хаба}). Сверстал их
+    (\texttt{\href{https://github.com/smart-cab/smartcab-hub/tree/main/frontend/src}{1}},
+    \texttt{\href{https://github.com/smart-cab/smartcab-dashboard/tree/main/frontend/src}{2}})
+    на \inlinecode{React}.
     \href{https://github.com/smart-cab/smartcab-bot}{Написал бота}
     для администрирования системы.
+    \href{https://github.com/smart-cab/smartcab-hub/blob/main/backend/smartcab/interface/mqtt.py}{Реализовал}
+    взаимодействие с умными устройствами по протокулу Zigbee, через
+    брокер сообщений Mosquitto.
 
+    Технический стек:
+    \begin{list2}
+    \item{Язык: \inlinecode{Python}, \inlinecode{Go},
+      \inlinecode{JavaScript}, \inlinecode{bash}}
+    \item{Фроеймворки: \inlinecode{Flask}}
+    \item{Базы данных: \inlinecode{sqlite}, \inlinecode{redis},
+      \inlinecode{postgres}}
+    \end{list2}
     \vspace{3mm}
 
-  \item[Starship]\small{Петпроект
-    \hfill \textsl{October 2003-September 2004\vspace{2mm}}}\\
-    Текстовая экшн \href{https://github.com/starship-crew}{Telegram
-    игра}, задача игрока в которой – прокачка своего космического
-    корабля и соревнование в боях с другими звездолётами. Разработал
-    мехнику онлайн дуэлей с реальными игроками в Telegram боте. В
-    рамках телеграм бота разработал удобный движок рендеринга
+  \item[Starship]\small{\href{https://github.com/starship-crew}{Текстовая
+      экшн игра в Telegram}
+    \hfill \textsl{Март 2023 — Апрель 2023\vspace{2mm}}}\\
+    Разработал мехнику
+    \href{https://github.com/starship-crew/telegram-client/blob/main/app/handlers/fight.py}{онлайн
+    дуэлей} с реальными игроками в Telegram боте. А
+    так же удобный
+    \href{https://github.com/starship-crew/telegram-client/blob/main/app/template.py}{движок
+    рендеринга}
     сообщений в чате через jinja2 шаблоны, так как для тектовой игры
     требовалось гибко работоать с большим количеством сценарных и
     пейзжаных текстов.
@@ -184,12 +205,13 @@ IT hack}}, где моя команда работала
 
     \vspace{3mm}
 
-  \item[Corpse]\small{Петпроект
-    \hfill \textsl{Ноябрь 2022 — Январь 2022\vspace{2mm}}}\\
-    Полнофункциональный модульный
-    \href{https://github.com/corpse-inc/corpse}{игровой движок} с
-    архитектурой
-    \href{https://en.wikipedia.org/wiki/Entity_component_system#:~:text=Entity%E2%80%93component%E2%80%93system%20(ECS,Entity%E2%80%93Component%E2%80%93System%20layout.}{ECS}
+  \item[Corpse]\small{\href{https://github.com/corpse-inc/corpse}{Игровой
+      движок}
+    \hfill \textsl{Ноябрь 2022 — Январь 2023\vspace{2mm}}}\\
+    В команде разработали полнофункциональный модульный
+    игровой движок с архитектурой
+    \href{https://en.wikipedia.org/wiki/Entity_component_system#:~:text=Entity%E2%80%93component%E2%80%93system%20(ECS,Entity%E2%80%93Component%E2%80%93System%20layout.}{ECS}.
+      А так же survival top-down шутер игру о зомбиапокалипсисе.
 
       Технический стек:
       \begin{list2}
@@ -202,12 +224,15 @@ IT hack}}, где моя команда работала
 
       \vspace{3mm}
 
-    \item[SchoolRing]\small{Петпроект\hfill
+    \item[SchoolRing]\small{\href{https://github.com/alchemmist/school-ring}{Управление
+        звонками в школах}
+        \begingroup
+        \hypersetup{urlcolor=blue!30}
+        \href{https://github.com/}{\texttt{release v0.0.2}}
+        \endgroup
+        \hfill
       \textsl{Октябрь 2022 — Ноябрь 2022\vspace{2mm}}}\\
-      \href{https://github.com/alchemmist/school-ring}{Дексктоп
-      приложение}, система управления звонками в школах
-      (\href{https://github.com/}{\texttt{release
-      v0.0.2}}). Настроил
+      Настроил
       \href{https://github.com}{\texttt{pre-commit}} для
       амтоматической конвертации \inlinecode{.ui} файлов в
       \inlinecode{.py}, а так же \href{https://github.com}{Github
@@ -229,45 +254,34 @@ IT hack}}, где моя команда работала
         \inlinecode{schedule}}
       \end{list2}
 
+  \end{description}
+
+  \section{\mysidestyle Заказная разработка}\vspace{2mm}
+
+  \begin{description}
+
+    \item[SmartCab]\small{\href{https://github.com/smart-cab}{Система
+        умного дома} \hfill
+      \textsl{Сентябрь 2023 — Май 2024\vspace{2mm}}}\\
+      Разработал
+      \href{https://www.figma.com/design/8H1tFpxgmIDV1xp06ndi73/SmartCab?node-id=0-1&p=f}{протопипы}
+      дизайна админ панели и интерфейса планшета управления
+      (\textit{т.н. хаба}). Сверстал их
+      (\texttt{\href{https://github.com/smart-cab/smartcab-hub/tree/main/frontend/src}{1}},
+      \texttt{\href{https://github.com/smart-cab/smartcab-dashboard/tree/main/frontend/src}{2}})
+      на \inlinecode{React}.
+      \href{https://github.com/smart-cab/smartcab-bot}{Написал бота}
+      для администрирования системы.
+      \href{https://github.com/smart-cab/smartcab-hub/blob/main/backend/smartcab/interface/mqtt.py}{Реализовал}
+      взаимодействие с умными устройствами по протокулу Zigbee, через
+      брокер сообщений Mosquitto.
+
+      Технический стек:
+      \begin{list2}
+      \item{Язык: \inlinecode{Python}, \inlinecode{Go}}
+      \end{list2}
       \vspace{3mm}
 
-    \item[Курс Python]\small{Начало обучения
-      \hfill \textsl{Сентябрь 2021 — Апрель 2022\vspace{2mm}}}\\
-      Прошёл курс по Python на Stepik и завершил его с
-      \href{https://github.com/alchemmist/CV/blob/main/attachments/stepik-python-course.pdf}{отличием}.
-
-    \item[Corpse]\small{Петпроект
-      \hfill \textsl{Ноябрь 2022 — Январь 2022\vspace{2mm}}}\\
-      Полнофункциональный модульный
-      \href{https://github.com/corpse-inc/corpse}{игровой движок} с
-      архитектурой
-      \href{https://en.wikipedia.org/wiki/Entity_component_system#:~:text=Entity%E2%80%93component%E2%80%93system%20(ECS,Entity%E2%80%93Component%E2%80%93System%20layout.}{ECS}
-
-        Технический стек:
-        \begin{list2}
-        \item{Язык: \inlinecode{Python}}
-        \item{Фреймворк: \inlinecode{Pygame}}
-        \item{Библиотеки: \inlinecode{esper}, \inlinecode{pytmx}}
-        \item{Инструменты работы с графикой: \inlinecode{aseprite},
-          \inlinecode{Tiled}}
-        \end{list2}
-
-      \item[Corpse]\small{Петпроект
-        \hfill \textsl{Ноябрь 2022 — Январь 2022\vspace{2mm}}}\\
-        Полнофункциональный модульный
-        \href{https://github.com/corpse-inc/corpse}{игровой движок} с
-        архитектурой
-        \href{https://en.wikipedia.org/wiki/Entity_component_system#:~:text=Entity%E2%80%93component%E2%80%93system%20(ECS,Entity%E2%80%93Component%E2%80%93System%20layout.}{ECS}
-
-          Технический стек:
-          \begin{list2}
-          \item{Язык: \inlinecode{Python}}
-          \item{Фреймворк: \inlinecode{Pygame}}
-          \item{Библиотеки: \inlinecode{esper}, \inlinecode{pytmx}}
-          \item{Инструменты работы с графикой: \inlinecode{aseprite},
-            \inlinecode{Tiled}}
-          \end{list2}
-
-      \end{description}
-    \end{resume}
-    \end{document}
+  \end{description}
+\end{resume}
+\end{document}
