@@ -849,7 +849,7 @@
       \setlength{\itemsep}{0in}
       \setlength{\parsep}{0in} \setlength{\parskip}{0in}
       \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
-  \setlength{\leftmargin}{0.25in}}}{
+  \setlength{\leftmargin}{0in}}}{
 \end{list}}
 
 \newcommand{\mysidestyle}{\small\sc}
@@ -911,6 +911,10 @@ citecolor=blue, urlcolor=blue]{hyperref}
 
 \newcommand{\fillwithline}{%
   \raisebox{0.5ex}{\rule[0.5ex]{\widthof{~}}{0.4pt}}%
+}
+
+\renewcommand*\descriptionlabel[1]{%
+  \hspace\labelsep\fontsize{10pt}{0pt}\selectfont\textbf{#1}%
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
