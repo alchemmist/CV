@@ -148,7 +148,7 @@ IT hack}}, где моя команда работала
     \href{https://github.com/alchemmist/coq-learning}{Прохожу} курс
     \texttt{\href{https://softwarefoundations.cis.upenn.edu}{softwarefoundations}}
     на \inlinecode{Coq}.
-  \item[Linux:] Arch, Hyprland
+  \item[Linux:] Arch, Hyprland, Neovim
 \end{description}
 \vfill
 % ------------------------------------------------------------------ %
@@ -159,12 +159,14 @@ IT hack}}, где моя команда работала
 
   \item[Patch Loyalty]\small Программа лояльности для малого бизнеса \hfill
     \textsl{Июль 2024 — Август 2024\vspace{1mm}}\\
-    На заказ разработал бота для администрирования и продажи Wireguard
-    ключей по подписке. Написал наглядную аналитику для
-    администратора по клиентом прямо в боте.
+    Разработал бота в Telegram по модели SMB (Single Message Bot) на
+    \inlinecode{Go} для коробочной системы лояльности
+    \href{https://ballkit.ru}{\texttt{ballkit.ru}}.
 
-    \textbf{Технологии:} \inlinecode{Python},
-    \inlinecode{python-telegram-bot}, \inlinecode{sqlite}.
+    \textbf{Технологии:}
+    \inlinecode{Go},
+    \inlinecode{tgbotapi}, \inlinecode{grpc},
+    \inlinecode{gofsm}.
 \end{description}
 
 \section{\mysidestyle Петпроекты}\vspace{2mm}
@@ -260,7 +262,7 @@ IT hack}}, где моя команда работала
   \begin{description}
     \item[Telegram боты]\small{
         \begingroup
-        \textcolor{gray!60}{Публикация всех исходников согласована}
+        \textcolor{gray!40}{Публикация всех исходников согласована}
         \endgroup
       }{\hfill
       \textsl{Лето 2024}}\vspace{2mm}
@@ -276,13 +278,21 @@ IT hack}}, где моя команда работала
           Технологии: \inlinecode{Python}, \inlinecode{sqlite},
           \inlinecode{python-telegram-bot}.
         }
+        \vspace{2mm}
+      \item{\href{https://github.com/alchemmist/content-parser}{Бот}
+          для агрегирования релевантных сообщений из чатов, каналов и
+          групп по ключевым словам.
+          Технологии:
+          \inlinecode{Python},
+          \inlinecode{theleton}, \inlinecode{redis}
+        }
 
         \vspace{2mm}
 
       \end{list2}
     \item[Дрегие проекты]\small{
         \begingroup
-        \textcolor{gray!60}{Публикация всех исходников согласована}
+        \textcolor{gray!40}{Публикация всех исходников согласована}
         \endgroup
       }{\hfill
       \textsl{Лето 2024}}\vspace{2mm}
@@ -339,7 +349,9 @@ IT hack}}, где моя команда работала
       \href{https://github.com/alchemmist/bookswap/tree/dev/backend}{бэкенд}
       с ключевой бизнес-логикой на \inlinecode{Spring} и
       \href{https://github.com/alchemmist/bookswap/tree/dev/auth-service}{сервис
-      авторизации} на \inlinecode{Go}, а так же фронтенд на
+      авторизации} на \inlinecode{Go}, а так же
+      \href{https://github.com/alchemmist/bookswap/tree/dev/frontend}{фронтенд}
+      на
       \inlinecode{React}.
 
       \textbf{Технологии:} \inlinecode{Java},
@@ -351,13 +363,17 @@ IT hack}}, где моя команда работала
 \end{resume}
 
 \begin{minipage}[H]{9.18\textwidth}
-  \begin{textblock}{7}(-0.65, 15.2)
+  \begin{textblock}{7}(-0.65, 15.1)
     \begingroup
     \hspace{35mm}
     \hypersetup{urlcolor=gray!90}
     \large
-    \href{https://github.com/alchemmist}{→ больше проектв на GitHub}
+    \href{https://github.com/alchemmist}{→ больше проектв на \underline{GitHub}}
     \endgroup
   \end{textblock}
+
 \end{minipage}
+
+\clearpage
+
 \end{document}
