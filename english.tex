@@ -1,232 +1,326 @@
 \documentclass[margin,line]{resume}
 
-\usepackage[utf8]{inputenc} 
+\usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{fontawesome}
 
-\usepackage[absolute]{textpos} 
-\usepackage{enumitem}
-
-\usepackage{graphicx,wrapfig}
-\usepackage{url}
-\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue,
-citecolor=blue, urlcolor=blue]{hyperref}
-\pdfcompresslevel=9
+% TODO: добавить схему микросервсиной архитектуры с хакатона как пруф
+% TODO: сделать автовыраваниване для фотки
+% TODO: возможно весь технический скилл написать?
+% TODO: сплющить проекты с одинаковым стеком технологий
+% TODO: про стартап нписать, поговорить с Марком чтоб его заопенсорсить
 
 \begin{document}
-{\sc \large Grishin Anton --- Backend Developer} \\
+
+{\vspace*{-13mm}\sc \large Anton Grishin --- Backend Developer} \\
 \begin{resume}
   \begin{minipage}[t]{0.55\textwidth}
     \section{\mysidestyle Personal\\Information}
-    Grishin Anton \\
+    Anton Grishin \\
     Moscow, Russia \\
+    \faGithub  \space
+    \href{https://github.com/alchemmist/}{\texttt{alchemmist}} \\
     \faLinkedin \space
     \href{https://www.linkedin.com/in/anton-grishin-6966a8362/}{\texttt{anton-grishin}}
     \\
-    \faGithub  \space
-    \href{https://github.com/alchemmist/}{\texttt{alchemmist}} \\
     \faPaperPlane \space \href{https://t.me/alchemmist}{\texttt{@alchemmist}} \\
     \faPhone \space
     \href{tel:+1234567890}{\color{blue}\texttt{+7(915)067-2638}}  \\
     \faEnvelope \space
     \href{mailto:anton.ingrish@gmail.com}{\color{blue}\texttt{anton.ingrish@gmail.com}}
   \end{minipage}
+
   \begin{minipage}[H]{0.18\textwidth}
-    % \includegraphics[width=0.45\textwidth]{images/avatar.png}
-    % \hspace{5mm}
-    \begin{textblock}{7}(10.54, 1.5)
+    \begin{textblock}{7}(10.84, 1.37)
       \includegraphics[width=0.27\textwidth]{images/avatar.png}
     \end{textblock}
   \end{minipage}
-  \section{\mysidestyle About me}
-  I am a former professional volleyball player, I graduated from the
-  Olympic reserve sports school. I also graduated from the
-  engineering class at school.
+
+  \vspace{-7mm}
+  \section{\mysidestyle About Me}
+  I am a student and an aspiring developer. I have been programming
+  for 4 years, during which I contributed to 44 repositories, made
+  921 commits, and wrote 176,729 lines of code. Former professional
+  \href{https://github.com/alchemmist/CV/blob/main/attachments/sport.pdf}{volleyball
+  player}. I am also a
+  \href{https://www.avito.ru/moskva/predlozheniya_uslug/prepodavatel_programmirovaniya_na_python_2556461612}{Python
+  instructor}, having taught over 30 students. Co-founder and
+  developer at \href{https://ballkit.ru/}{Ballkit}.
 
   \section{\mysidestyle Skills}
+
+  \vspace{0.5mm}
+
   \begin{description}[leftmargin=0pt, itemindent=*]
-    \item[Python:] FastAPI, Flask, SqlAlchemy, python-telegram-bot,
-      faststream, numpy, pandas.
-    \item[Go] FastAPI, Flask, SqlAlchemy, python-telegram-bot,
-      faststream, numpy, pandas.
-    \item[Databases] Postgres, sqlite, Redis, S3(Yandex Object Storage).
-    \item[Message brokers:] RebbitMQ, Kafka, Mosquitto.
-    \item[Other techonologies:] SQL, Java, JavaScript, Rust, Latex, Go.
-    \item[Scientific softwares] Comsys, Maple, Matlab, Mathematica,
-      Scilab, Keysight's VEE and ADS, NI LabVIEW.
-    \item[Dev tools:] Neovim, Docker, docker-compose, docker-swarm,
-      CI/CD(Github actions, GitLab actions)
-    \item[Languages:] Russian, English.
+    \item[Python:] \hangindent=9mm \hangafter=1
+      \inlinecode{FastAPI}, \inlinecode{pydantic},
+      \inlinecode{Flask},
+      \inlinecode{SQLAlchemy}, \inlinecode{faststream},
+      \inlinecode{alembic}, \inlinecode{pytest}.
+    \item[Go:] \inlinecode{http}, \inlinecode{grpc},
+      \inlinecode{protobuf}, \inlinecode{tgbotapi},
+      \inlinecode{reflect}, \inlinecode{gofsm}.
+    \item[Databases:] \inlinecode{postgres}, \inlinecode{sqlite},
+      \inlinecode{redis}, \inlinecode{Yandex Object Storage}.
+    \item[Message brokers:] \inlinecode{RabbitMQ}, \inlinecode{Mosquitto}.
+    \item[Other technologies:] \inlinecode{SQL}, \inlinecode{Java},
+      \inlinecode{JavaScript}, \inlinecode{bash}.
+    \item[Dev tools:] \inlinecode{Docker}, \inlinecode{Podman},
+      \inlinecode{Make}, \inlinecode{CI/CD}, \inlinecode{Linux},
+      \inlinecode{Git}
   \end{description}
 
   \section{\mysidestyle Education}
-  Central University - Mathematics and Computer Science, 2028
+  \href{https://centraluniversity.ru/}{Central University} ---
+  Mathematics and Computer Science, 2028
 
   \section{\mysidestyle Certifications}
-  \textbf{Yandex Lyceum.} I was externally admitted directly into the
-  second year of the Yandex Academy Lyceum's Industrial Development
-  course. I earned a honors certificate and achieved a perfect score
-  of 100/100 on the final project.
+  \textbf{Yandex Lyceum}. Admitted externally to the 2nd year of the
+  \href{https://lyceum.yandex.ru/}{Yandex Academy Lyceum} in
+  "Industrial Development." Solved 236 problems, implemented and
+  defended 3 projects, scored 100/100 on the final. Graduated with
+  \href{https://github.com/alchemmist/CV/blob/main/attachments/yandex-lyceum.pdf}{honors}.
+
   \vspace{-6mm}
 
-  \hfill \textsl{September 2022 - April 2023}
+  \hfill \textsl{September 2022 — April 2023}
+
+  \textbf{Python Course}. Completed the
+  \href{https://stepik.org/course/67}{Stepik course} on
+  \inlinecode{Python}, solving 71 exercises and finishing with
+  \href{https://github.com/alchemmist/CV/blob/main/attachments/stepik-python-course.pdf}{distinction}.
+
+  \vspace{-7mm}
+
+  \hfill \textsl{September 2021 — April 2022}
 
   \section{\mysidestyle Achievements}
-  \textbf{Qualified for the finals of the Russian Competitive
-  Programming Championship}, where our team designed a microservice
-  architecture for a web app aggregating sports events across Russia
-  (tech stack: RabbitMQ (FastStream), FastAPI, React, Kafka, OAuth)
-  and developed an algorithm for processing and validating annual
-  government reports on sports events.
+  Finalist of the \textbf{Russian Championship} in competitive
+  programming (among 5000 participants). Developed a
+  \href{https://github.com/alchemmist/CV/blob/main/attachments/architect.pdf}{microservice
+  architecture} of 9 services for a
+  \href{https://github.com/alchemmist/sportprog}{web application}
+  aggregating sports events across Russia. Also created an
+  \href{https://github.com/alchemmist/sport-afisha/blob/main/event_parsing_service/parse_pdf.py}{algorithm}
+  for processing and validating annual state reports on sports
+  events. Tech stack: \inlinecode{Kafka}, \inlinecode{React},
+  \inlinecode{RabbitMQ (FastStream)}, \inlinecode{FastAPI}, \inlinecode{OAuth}.
+
   \vspace{-6mm}
 
-  \hfill \textsl{November 2024}
+  \hfill \textsl{December 2024}
 
-  \textbf{Participated in the Nuclear IT Hackathon}, where my team
-  and I worked on a Rosatom case to develop a service for determining
-  the emotional tone of online meeting statements. I created
-  prototypes and implemented the frontend on React, while my team
-  trained the model.
+  \textbf{Winner} of the "Science for Life" scientific-practical
+  conference among 117 projects with a smart home project for private
+  and public educational institutions. Tech stack:
+  \inlinecode{Redis}, \inlinecode{Zigbee2MQTT},
+  \inlinecode{websockets}, \inlinecode{Go}, \inlinecode{Python},
+  \inlinecode{Flask}, \inlinecode{React}.
   \vspace{-6mm}
 
   \hfill \textsl{April 2024}
 
-  \textbf{I won the Science for Life scientific-practical
-  conference} with a smart home project for private and public
-  educational institutions (tech stack: Redis, Zigbee2MQTT,
-  websockets, Go, Python, Flask, React).
+  Participant in the \textbf{Nuclear IT Hack} hackathon, where our
+  team worked for 48 hours on a Rosatom case: a service for detecting
+  emotional tone in online meetings.
+
+  \vspace{-7mm}
+
+  \hfill \textsl{April 2024}
+
+  \textbf{3rd Prize} in the MPGU Olympiad in Informatics: "Applied Informatics".
+  \vspace{-2mm}
+
+  \hfill \textsl{June 2023}
+  \vspace{-4mm}
+  \section{\mysidestyle Interests}\vspace{0.7mm}
+
+  {\textbf{Formal Verification:} Currently taking the
+    \href{https://softwarefoundations.cis.upenn.edu}{Software
+    Foundations} course. Completed the first volume and
+    \href{https://github.com/alchemmist/coq-learning}{proved} 250
+  theorems in \inlinecode{Coq}.} \\
+
   \vspace{-6mm}
 
-  \hfill \textsl{June 2024}
-
-  \section{\mysidestyle Interestings}\vspace{2mm}
-  \begin{description}
-    \item[Philosophy] Unix, Linux and Windows
-    \item[Books:] Unix, Linux and Windows
-  \end{description}
+  \textbf{Linux:} Using Arch with the Hyprland compositor. Published
+  my \href{https:/github.com/alchemmist/.dotfiles}{.dotfiles}. Wrote
+  my Neovim
+  \href{https://github.com/alchemmist/.dotfiles/tree/main/nvim}{config}
+  from scratch and a color
+  \href{https://github.com/alchemmist/nothing.nvim}{theme}. Authored
+  598 lines of custom
+  \href{https://github.com/alchemmist/.dotfiles/tree/main/scripts}{scripts}.
 
   \vfill
+  % ------------------------------------------------------------------ %
 
-  \section{\mysidestyle History}\vspace{2mm}
+  \section{\mysidestyle Startup Experience}\vspace{2mm}
 
   \begin{description}
 
-    \item[Measurement Engineer (CNRS)]\small{XLIM \hfill \textsl{June
-      2016-Present}}\\
-    \item[Lecturer]\small{University of Colorado, Boulder \hfill
-      \textsl{January 2016-May 2016}}\\
-      ECEN 5014-003, ``Microwave Measurements and Calibration Fundamentals''
-      \vspace{2mm}
+    \item[Patch Loyalty]\small Loyalty program for SMBs \hfill
+      \textsl{July 2024 — August 2024}\vspace{1mm}\\
+      Developed a Single Message Bot in Telegram using
+      \inlinecode{Go} for the boxed loyalty solution
+      \href{https://ballkit.ru}{\texttt{ballkit.ru}}.
 
-    \item[Research Associate]\small{University of Colorado at Boulder
-      \hfill \textsl{June 2013-May 2016}}\\
-      Achievements:
+      \textbf{Technologies:}
+      \inlinecode{Go},
+      \inlinecode{tgbotapi}, \inlinecode{grpc},
+      \inlinecode{gofsm}.
+  \end{description}
+
+  \section{\mysidestyle Personal Projects}\vspace{2mm}
+
+  \begin{description}
+
+    \item[SmartCab]\small{\href{https://github.com/smart-cab}{School
+        smart home system} \hfill
+      \textsl{September 2023 — May 2024}\vspace{1mm}}\\
+      Designed
+      \href{https://www.figma.com/design/8H1tFpxgmIDV1xp06ndi73/SmartCab?node-id=0-1&p=f}{admin
+      panel and tablet interface prototypes} and implemented them in
+      \inlinecode{React}. Developed a bot for system administration
+      and implemented interaction with five smart devices over Zigbee
+      via Mosquitto broker and three classroom scenarios.
+      Technologies: \inlinecode{Python}, \inlinecode{Go},
+      \inlinecode{JavaScript}, \inlinecode{bash}, \inlinecode{Flask},
+      \inlinecode{sqlite}, \inlinecode{redis}, \inlinecode{postgres},
+      \inlinecode{JsSip}.
+      \vspace{3mm}
+
+    \item[Starship]\small{\href{https://github.com/starship-crew}{Text-based
+        action game in Telegram} \hfill \textsl{March 2023 — April
+      2023}\vspace{1mm}}\\
+      Developed real-time duel mechanics for players in a Telegram
+      bot and a flexible message rendering engine using jinja2
+      templates for complex narrative texts. Technologies:
+      \inlinecode{Python}, \inlinecode{Flask}, \inlinecode{alembic},
+      \inlinecode{python-telegram-bot}, \inlinecode{SQLAlchemy},
+      \inlinecode{jinja2}.
+
+      \vspace{3mm}
+
+    \item[Corpse]\small{\href{https://github.com/corpse-inc/corpse}{Game
+      engine} \hfill \textsl{November 2022 — January 2023}\vspace{1mm}}\\
+      Collaborated on a modular ECS-based game engine and built a
+      survival top-down shooter about a zombie apocalypse.
+      Technologies: \inlinecode{Python}, \inlinecode{Pygame},
+      \inlinecode{esper}, \inlinecode{pytmx}, \inlinecode{aseprite},
+      \inlinecode{Tiled}.
+
+      \vspace{3mm}
+
+    \item[SchoolRing]\small{\href{https://github.com/alchemmist/school-ring}{School
+        bell scheduling} \begingroup
+        \hypersetup{urlcolor=blue!30}
+        \href{https://github.com/}{\texttt{release v0.0.2}}
+        \endgroup
+        \hfill
+      \textsl{October 2022 — November 2022}\vspace{1mm}}\\
+      Developed a desktop application in \inlinecode{PyQt6}.
+      Configured \href{https://github.com}{\texttt{pre-commit}} hooks
+      to auto-convert .ui files to .py and CI actions for
+      cross-platform releases. Recently migrated the project to
+      \href{https://astral.sh/blog/uv}{\texttt{uv}} for dependency
+      management. Technologies: \inlinecode{Python},
+      \inlinecode{PyQt6}, \inlinecode{threading}, \inlinecode{schedule}.
+
+  \end{description}
+
+  \section{\mysidestyle Contract Development}\vspace{2mm}
+
+  \begin{description}
+    \item[Telegram Bots]\small{
+        \begingroup
+        \textcolor{gray!40}{\textit{Publication of all sources approved}}
+        \endgroup
+      }{\hfill
+      \textsl{Summer 2024}}\vspace{2mm}
       \begin{list2}
-      \item{LabVIEW software for a ``Do-it-yourself'' Large-Signal
-        Network Analyzer (LSNA)}
-      \item{Time domain measurement setup in Scilab (VTD-SWAP)}
-      \item{Outphasing PA characterizations}
-      \item{Load-pull in time-domain}
+      \item{Developed a
+          \href{https://github.com/alchemmist/vpn-bot}{bot} for
+          administering and selling WireGuard keys via subscription.
+          Implemented inline analytics
+          \href{https://github.com/alchemmist/vpn-bot/tree/develop?tab=readme-ov-file#demo}{reports}
+          directly in the bot. Technologies: \inlinecode{Python},
+          \inlinecode{sqlite}, \inlinecode{python-telegram-bot}.
+        }
+        \vspace{2mm}
+      \item{\href{https://github.com/alchemmist/content-parser}{Bot}
+          for aggregating relevant messages from chats, channels, and
+          groups by keywords. Technologies: \inlinecode{Python},
+          \inlinecode{theleton}, \inlinecode{redis}
+        }
+
+        \vspace{2mm}
+
       \end{list2}
-      \vspace{2mm}
-
-    \item[Measurement Engineer (CNRS)]\small{XLIM \hfill
-      \textsl{December 2007-May 2013}}\\
-      Achievements:
+    \item[Other Projects]\small{
+        \begingroup
+        \textcolor{gray!40}{\textit{Publication of all sources approved}}
+        \endgroup
+      }{\hfill
+      \textsl{Summer 2024}}\vspace{2mm}
       \begin{list2}
-      \item{Korrigan European Project activities (RTP
-            N$^{\circ}$102.052 funded within the EUROPA framework in the
-          CEPA2 priority area - ends early 2009) : GaN HEMTs circuits
-          level modeling from european foundries (Thales / QinetiQ) for
-        HPA, LNA and Switches}
-      \item{Time domain measurement setup (LSNA) development on
-        Scilab-TCL/TK (GUI, calibration and measurement automation)}
-      \item{Development of HEMTs modeling tools (Scilab)}
-      \item{Contractual measurements such as load-pull, linearity,
-        high impedance probe in both frequency (VNA) and time domain (LSNA)}
+
+      \item{\href{https://github.com/alchemmist/portu-hack}{Parser}
+          for the Portuguese embassy website with authentication
+          \texttt{auth.py}, captcha solving \texttt{captcha.py}, and
+          branching form traversal \texttt{snif.py}. Created a Docker
+          image for containerized parsing using Selenium on Chromium.
+          Configured \texttt{pre-commit} hooks for Ruff linter and
+          Pyright static analysis. Technologies: \inlinecode{Python},
+          \inlinecode{selenium}, \inlinecode{psycopg},
+        \inlinecode{SQLAlchemy}, \inlinecode{FastAPI}.}
+
+        \vspace{2mm}
+
+      \item{\href{https://github.com/alchemmist/outline-vpn-cli}{CLI
+          tool} for secure operations on Outline servers across
+        thousands of clients. Technologies: \inlinecode{Python}.}
       \end{list2}
-      \vspace{2mm}
 
-    \item[Research Associate - Visiting Scholar]\small{University of
-      Colorado at Boulder \hfill \textsl{February 2012-July 2012}}\\
-      GaN HEMTs based rectifiers characterizations and analysis
-      \vspace{2mm}
+  \end{description}
 
-    \item[Research Engineer (CNRS)]\small{XLIM \hfill \textsl{May
-      2005-November 2007}}\\
-      Achievements:
-      \begin{list2}
-      \item{Frequency domain load-pull measurement setup (VNA in
-          receiver mode with pulse capabilities) developpemnt with
-          Scilab (calibration procedures, measurement automation, data
-        processing)}
-      \item{Large signal caracterization of transistor (mainly
-          european GaN in the framework of Korrigan}
-        \item{Korrigan WP3.3 workpackage leader in Korrigan.
-            Developpement of a internet database (Php / mySQL) to let
-          partners share data and informations}
-        \item{GaN HEMTs ``spice-like'' nonlinear models}
-        \end{list2}
-        \vspace{2mm}
+  \section{\mysidestyle Lab Works}\vspace{2mm}
 
-      \item[Research Engineer]\small{NMDG Engineering bvba \hfill
-        \textsl{November 2004-February 2005}}\\
-        Implementation of the High Impedance Probe module
-        (calibration and measurements) in the commercial LSNA
-        Software (based on Mathematica)
+  \begin{description}
 
-        \vspace{2mm}
+    \item[BookSwap]\small{\href{https://github.com/alchemmist/bookswap}{Book
+        exchange service} \hfill
+      \textsl{May 2024}\vspace{1mm}}\\
+      Designed the database schema
+      \href{https://github.com/alchemmist/bookswap/blob/dev/backend/src/main/resources/schema.sql}{definition}.
+      Implemented the backend with core business logic in
+      \inlinecode{Spring} and the
+      \href{https://github.com/alchemmist/bookswap/tree/dev/auth-service}{authentication
+      service} in \inlinecode{Go}, plus a
+      \href{https://github.com/alchemmist/bookswap/tree/dev/frontend}{frontend}
+      in \inlinecode{React}.
 
-      \item[Postdoctoral scientist]\small{CNES (French Space Agency)
-        \hfill \textsl{October 2003-September 2004}}\\
-        Development of characterization tools interfaces within the
-        free open-source scientific package Scilab
+      \textbf{Technologies:} \inlinecode{Java},
+      \inlinecode{SpringBoot}, \inlinecode{Lombok},
+      \inlinecode{JavaScript}, \inlinecode{React}, \inlinecode{Go},
+      \inlinecode{crypto}, \inlinecode{pgx}.
 
-        \vspace{2mm}
+  \end{description}
+\end{resume}
 
-      \item[Postdoctoral scientist]\small{CNES (French Space Agency)
-        \hfill \textsl{October 2002-September 2003}}\\
-        Achievements:
-        \begin{list2}
-        \item{Large Signal Network Analysis (LSNA) characterizations
-          in time-domain}
-        \item{Development of a new LSNA module in order to
-            investigate time domain waveforms at internal nodes of
-            MMICs with high impedance probes (HIP) to validate circuits
-          designs and to analyze nonlinear parametric stability}
-        \item{Large Signal Network Analysis (LSNA) characterizations
-          in time-domain}
-        \end{list2}
-        \vspace{2mm}
+\begin{minipage}[H]{9.18\textwidth}
+  \begin{textblock}{7}(-0.65, 15.1)
+    \begingroup
+    \hspace{35mm}
+    \hypersetup{urlcolor=gray!90}
+    \large
+    \href{https://github.com/alchemmist}{→ more projects on \underline{GitHub}}
+    \endgroup
+  \end{textblock}
 
-      \item[Researcher]\small{IRCOM / University of Limoges \hfill
-        \textsl{October 1998-September 2002}}\\
-        Achievements:
-        \begin{list2}
-        \item{Development of the RF time-domain envelope measurement
-          setup (hardware and software)}
-        \item{Development of the calibration procedure of the
-          time-domain envelope measurement setup}
-        \item{Power amplifiers characterizations : Load-pull, IM3, NPR}
-        \item{Behavioral modeling of nonlinear devices with memory
-          effects for system level}
-        \item{Development of a dynamic complex gain model with neural networks}
-        \end{list2}
-        \vspace{2mm}
+\end{minipage}
 
-      \item[Lecturer]\small{University of Limoges \hfill
-        \textsl{October 1998-September 2002}}\\
-        RF devices, analog/digital communication systems, signal
-        processing, propagation waves...
-        \vspace{2mm}
+\clearpage
 
-      \item[Postgraduate student]\small{IRCOM / University of Limoges
-        \hfill \textsl{February 1998-July 1998}}\\
-        Circuits level simulations of IM3 and NPR in order to
-        optimize the trade-off between linearity and efficiency
-
-    \end{description}
-
-  \end{resume}
-  \end{document}
+\end{document}
