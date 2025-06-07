@@ -232,7 +232,6 @@
   }%
 \endgroup}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % this is used to print the name and address at the top of
 % the page with a hline in between
@@ -897,7 +896,7 @@
   right=2pt,
   top=1pt,
   bottom=1pt,
-  fontupper=\ttfamily\small\mystrut
+  fontupper=\ttfamily\small\color{darkgray}\mystrut
 }
 
 \usepackage[absolute]{textpos}
@@ -922,4 +921,3 @@ citecolor=blue, urlcolor=blue]{hyperref}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
