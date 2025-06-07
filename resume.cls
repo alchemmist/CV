@@ -1,3 +1,6 @@
+% Thanks for kickstart:
+% https://www.overleaf.com/latex/templates/tibault-reveyrands-resume-slash-curriculum-vitae/hxprjhpjbrcy
+
 % RESUME DOCUMENT STYLE -- Released 23 Nov 1989
 %    for LaTeX version 2.09
 % Copyright (C) 1988,1989 by Michael DeCorte
@@ -228,6 +231,7 @@
     }%
   }%
 \endgroup}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % this is used to print the name and address at the top of
@@ -816,7 +820,7 @@
 \itemsep=0cm
 \parsep=0cm
 \topmargin=-12mm
-\textheight=257mm
+\textheight=258mm
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -918,3 +922,4 @@ citecolor=blue, urlcolor=blue]{hyperref}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
