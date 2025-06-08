@@ -10,6 +10,7 @@
 % TODO: возможно весь технический скилл написать?
 % TODO: сплющить проекты с одинаковым стеком технологий
 % TODO: про стартап нписать, поговорить с Марком чтоб его заопенсорсить
+% TODO: во ВСЕХ readme должны быть скрины
 
 \begin{document}
 
@@ -73,7 +74,7 @@
 
   \section{\mysidestyle Образование}
   \href{https://centraluniversity.ru/}{Центральный Университет} —
-  Математика и компьютерные науки, 2028
+  Математика и компьютерные науки, 2028 \textit{(1 курс)}.
 
   \section{\mysidestyle Сертификаты}
   \textbf{Яндекс Лицей}. Экстерном поступил на 2-й курс
@@ -138,7 +139,8 @@
 
   \textbf{Участник хакатона \href{https://nuclearhack.mephi.ru/}{Nuclear
   IT Hack}}, где моя команда 48 часов работала
-  над кейсом Росатома: AI сервис для определения эмоционального тона онлайн-встреч.
+  над кейсом Росатома: AI сервис для определения эмоционального тона
+  онлайн-встреч.
 
   \vspace{-7mm}
 
@@ -253,16 +255,14 @@
 
       \item[SchoolRing]\small{\href{https://github.com/alchemmist/school-ring}{Управление
           звонками в школах}
-          \begingroup
-          \hypersetup{urlcolor=blue!30}
-          \href{https://github.com/}{\texttt{release v0.0.2}}
-          \endgroup
           \hfill
         \textsl{Октябрь 2022 — Ноябрь 2022\vspace{1mm}}}\\
         Разработал декстоп-приложение на \inlinecode{PyQt6}. Настроил
-        \href{https://github.com}{\texttt{pre-commit}} для
+        \href{https://github.com/alchemmist/school-ring/blob/main/.pre-commit-config.yaml}{\texttt{pre-commit}}
+        для
         автоматической конвертации \inlinecode{.ui} файлов в
-        \inlinecode{.py}, а также \href{https://github.com}{actions}
+        \inlinecode{.py}, а также
+        \href{https://github.com/alchemmist/school-ring/blob/main/.github/workflows/build.yaml}{actions}
         для автоматической сборки нового релиза под все
         операционные системы при каждом коммите в main. Недавно перевёл
         проект на \href{https://astral.sh/blog/uv}{\texttt{uv}} для
@@ -270,11 +270,6 @@
         Технологии:
         \inlinecode{Python}, \inlinecode{PyQt6},
         \inlinecode{threading}, \inlinecode{schedule}.
-        % TODO: сделать рабочий релиз
-        % TODO: настроить pre-commit для .ui -> .py (написать об этом здесь)
-        % TODO: перехать только на pyqt6
-        % TODO: настроить pre-commit и добавить ссылку на файл
-        % TODO: подконец исправить версию релиза
 
     \end{description}
 

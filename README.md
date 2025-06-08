@@ -1,8 +1,7 @@
 <h2><img src="./images/logo.svg" alt="Favicon Preview" width="85" align="center"> Resume (CV)</h2>
 
 [![Github](https://img.shields.io/badge/alchemmist%2FCV-blue?logo=github&label=github&color=blue)](https://github.com/alchemmist/CV)
-![Last commit](https://img.shields.io/github/last-commit/alchemmist/CV?style=flat)
-![Stars](https://img.shields.io/github/stars/alchemmist/CV?style=flat)
+![Last commit](https://img.shields.io/github/last-commit/alchemmist/CV?style=flat) ![Stars](https://img.shields.io/github/stars/alchemmist/CV?style=flat)
 ![Forks](https://img.shields.io/github/forks/alchemmist/CV?style=flat)
 ![License](https://img.shields.io/github/license/alchemmist/CV?style=flat)
 ![Contributors](https://img.shields.io/github/contributors/alchemmist/CV?style=flat)
@@ -54,4 +53,20 @@ If you have questions about this repo or you want to contribute, [text me](https
 <img src="./images/demo.png" alt="Favicon Preview"  style="margin-bottom: 10px">
 
 ### License
+
 Licensed under of The [MIT](./LICENSE) License.
+
+### Thanks for review
+
+- Anatoly Zinoviev
+- Alexander Shakhov
+- Natalia Kuznetsova
+- Mikhail Doshevsky
+- Yegor Bugayenko
+- Nikita Sobolev
+- Maxim Smirnov
+- Grigory Petrov
+- Pavel Sokolov
+- Mikhail Flenov
+- Yulia Lukyanova
+- Ruslan Masgutov
