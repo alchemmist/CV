@@ -1,7 +1,7 @@
 all: build
 
 build:
-	latexmk -pdf -aux-directory=aux -output-directory=pdf *.tex
+	latexmk -pdf -aux-directory=aux -output-directory=pdf tex/*.tex
 	rm -r aux
 
 add-built-files:

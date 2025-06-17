@@ -1,0 +1,10 @@
+alchemmist.xyz {
+    root * /srv/site
+    file_server
+
+    handle_path /cv* {
+        root * /srv/site
+        file_server
+    }
+}
+

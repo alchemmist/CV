@@ -56,7 +56,8 @@
 
   \section{\mysidestyle Образование}
   \href{https://centraluniversity.ru/}{Центральный Университет} —
-  Математика и компьютерные науки, 2028 \textit{(1 курс)}. Направление «Разработка». Траектория «Computer Science Research».
+  Математика и компьютерные науки, 2028 \textit{(1 курс)}.
+  Направление «Разработка». Траектория «Computer Science Research».
   % TODO: уточнить трек
 
   \section{\mysidestyle Навыки}
@@ -80,28 +81,6 @@
       \inlinecode{Make}, \inlinecode{CI/CD}, \inlinecode{Linux},
       \inlinecode{Git}
   \end{description}
-
-  \section{\mysidestyle Сертификаты}
-  \textbf{Яндекс Лицей}. Экстерном поступил на 2-й курс
-  \href{https://lyceum.yandex.ru/}{Лицея
-  Академии Яндекса} по «Промышленной Разработке». Решил 236 задач,
-  реализовал и защитил 3 проекта, финальный на 100/100 баллов. Окончил с
-  \href{https://github.com/alchemmist/CV/blob/main/attachments/yandex-lyceum.pdf}{аттестатом
-  с отличием}.
-
-  \vspace{-6mm}
-
-  \hfill \textsl{Сентябрь 2022 — Апрель 2023}
-
-  \textbf{Курс Python}. Прошёл
-  \href{https://stepik.org/course/67}{курс} по \inlinecode{Python} на
-  Stepik. Выполнил 71
-  здание и завершил его с
-  \href{https://github.com/alchemmist/CV/blob/main/attachments/stepik-python-course.pdf}{отличием}.
-
-  \vspace{-7mm}
-
-  \hfill \textsl{Сентябрь 2021 — Апрель 2022}
 
   \section{\mysidestyle Достижения}
   Прошёл в
@@ -158,6 +137,28 @@
   \vspace{-2mm}
 
   \hfill \textsl{Июнь 2023}
+
+  \section{\mysidestyle Сертификаты}
+  \textbf{Яндекс Лицей}. Экстерном поступил на 2-й курс
+  \href{https://lyceum.yandex.ru/}{Лицея
+  Академии Яндекса} по «Промышленной Разработке». Решил 236 задач,
+  реализовал и защитил 3 проекта, финальный на 100/100 баллов. Окончил с
+  \href{https://github.com/alchemmist/CV/blob/main/attachments/yandex-lyceum.pdf}{аттестатом
+  с отличием}.
+
+  \vspace{-6mm}
+
+  \hfill \textsl{Сентябрь 2022 — Апрель 2023}
+
+  \textbf{Курс Python}. Прошёл
+  \href{https://stepik.org/course/67}{курс} по \inlinecode{Python} на
+  Stepik. Выполнил 71
+  здание и завершил его с
+  \href{https://github.com/alchemmist/CV/blob/main/attachments/stepik-python-course.pdf}{отличием}.
+
+  \vspace{-7mm}
+
+  \hfill \textsl{Сентябрь 2021 — Апрель 2022}
   \vspace{-4mm}
   \section{\mysidestyle Интересы}\vspace{0.7mm}
 
