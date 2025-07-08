@@ -868,7 +868,6 @@
 % \definecolor{sidebarcolor}{RGB}{51,51,51} % black - nice!
 % \definecolor{sidebarcolor}{RGB}{70,130,180} % sky blue - dont know
 % \definecolor{sidebarcolor}{RGB}{108,26,54} % purple
-\definecolor{sidebarcolor}{RGB}{47,79,79} % forest - nice
 
 \newlength\SidebarWidth
 \setlength\SidebarWidth{2cm}
