@@ -903,7 +903,7 @@
 
 \usepackage{graphicx,wrapfig}
 \usepackage{url}
-\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue,
+\usepackage[unicode, colorlinks=true, pdfstartview=FitV, linkcolor=blue,
 citecolor=blue, urlcolor=blue]{hyperref}
 \pdfcompresslevel=9
 \usepackage{xcolor}
