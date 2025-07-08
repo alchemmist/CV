@@ -869,6 +869,10 @@
 % \definecolor{sidebarcolor}{RGB}{70,130,180} % sky blue - dont know
 % \definecolor{sidebarcolor}{RGB}{108,26,54} % purple
 
+% yellow:
+% \definecolor{sidebarcolor}{RGB}{204, 153, 0}
+% \definecolor{sidebarcolor}{RGB}{189, 155, 50}
+
 \newlength\SidebarWidth
 \setlength\SidebarWidth{2cm}
 

@@ -1,0 +1,248 @@
+\documentclass[margin,line]{resume}
+
+\definecolor{sidebarcolor}{RGB}{27, 69, 59}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome}
+
+\begin{document}
+
+{\vspace*{-13mm}\sc \large Anton Grishin — Python Developer} \\
+\begin{resume}
+  \begin{minipage}[t]{0.55\textwidth}
+    \section{\mysidestyle Personal\\Information}
+    Moscow, Russia \\
+    \faGithub  \space
+    \href{https://github.com/alchemmist/}{\texttt{alchemmist}} \\
+    \faLinkedin \space
+    \href{https://www.linkedin.com/in/anton-grishin-6966a8362/}{\texttt{anton-grishin}}
+    \\
+    \faPaperPlane \space \href{https://t.me/alchemmist}{\texttt{@alchemmist}} \\
+    \faPhone \space
+    \href{tel:+1234567890}{\color{blue}\texttt{+7(915)067-2638}}  \\
+    \faEnvelope \space
+    \href{mailto:anton.ingrish@gmail.com}{\color{blue}\texttt{anton.ingrish@gmail.com}}
+  \end{minipage}
+
+  \begin{minipage}[H]{0.18\textwidth}
+    \begin{textblock}{7}(10.96, 1.30)
+      \includegraphics[width=0.255\textwidth]{../images/avatar.png}
+    \end{textblock}
+  \end{minipage}
+
+  \vspace{-7mm}
+  \section{\mysidestyle About Me}
+  I am a student and aspiring developer. I have been programming for 4 years, during this time I have contributed to 44 repositories, made 921 commits, and written 176,729 lines of code.
+  I \href{https://www.avito.ru/moskva/predlozheniya_uslug/prepodavatel_programmirovaniya_na_python_2556461612}{teach}
+  Python, having trained over 30 students. Co-founder and developer at \href{https://ballkit.ru/}{Ballkit}. Previously a professional \href{https://alchemmist.github.io/CV/attachments/sport.pdf}{volleyball player}.
+
+  \section{\mysidestyle Education}
+  \href{https://centraluniversity.ru/}{Central University} —
+  Mathematics and Computer Science, 2028 \textit{(1st year)}.
+  Major: “Development”. Track: “Computer Science Research”.
+  % TODO: clarify track
+
+  \section{\mysidestyle Skills}
+
+  \vspace{0.4mm}
+  \begin{description}[leftmargin=0pt, itemindent=*, itemsep=0.2pt]
+    \item[Python:] \hangindent=9mm \hangafter=1
+      \inlinecode{FastAPI}, \inlinecode{pydantic},
+      \inlinecode{Flask},
+      \inlinecode{SQLAlchemy}, \inlinecode{faststream},
+      \inlinecode{alembic}, \inlinecode{pytest}.
+    \item[Databases:] \inlinecode{postgres}, \inlinecode{sqlite},
+      \inlinecode{redis}, \inlinecode{Yandex Object Storage}.
+    \item[Message brokers:] \inlinecode{RabbitMQ}, \inlinecode{Mosquitto}.
+    \item[Other technologies:] \inlinecode{SQL}, \inlinecode{Java},
+      \inlinecode{JavaScript}, \inlinecode{bash}.
+    \item[Dev tools:] \inlinecode{Docker}, \inlinecode{Podman},
+      \inlinecode{Make}, \inlinecode{CI/CD}, \inlinecode{Linux},
+      \inlinecode{Git}
+  \end{description}
+
+  \section{\mysidestyle Achievements}
+  Reached the \textbf{final}
+  (\href{https://alchemmist.github.io/CV/attachments/russian-chemp-final.pdf}{\texttt{1}})
+  of the Russian Championship
+  in sports programming, among 5000 participants. Developed a
+  \href{https://alchemmist.github.io/CV/attachments/architect.pdf}{microservice architecture}
+  of 9 services for the
+  \href{https://github.com/alchemmist/sportprog}{web application}
+  aggregating sports events across Russia. And developed an
+  \href{https://github.com/alchemmist/sport-afisha/blob/main/event_parsing_service/parse_pdf.py}{algorithm}
+  for processing and validating annual government reports on sporting events.
+  Tech stack: \inlinecode{Kafka}, \inlinecode{React},
+  \inlinecode{RabbitMQ (FastStream)},
+  \inlinecode{FastAPI},
+  \inlinecode{OAuth}.
+
+  \textbf{\href{https://alchemmist.github.io/CV/attachments/scince-for-life-win.pdf}{Winner}
+  of the “Science for Life” scientific-practical conference}
+  among 117 projects with a smart home system project for private and public
+  educational institutions. Tech stack: \inlinecode{Redis},
+  \inlinecode{Zigbee2MQTT}, \inlinecode{websockets}, \inlinecode{Go},
+  \inlinecode{Python}, \inlinecode{Flask}, \inlinecode{React}.
+
+  \textbf{\href{https://alchemmist.github.io/CV/attachments/informatics-olimpic.pdf}{Third Prize}
+  winner}, MPGU Informatics Olympiad:
+  “Applied Informatics”
+
+  \section{\mysidestyle Certificates}
+  \textbf{Yandex Lyceum}. Entered the 2nd year of the
+  \href{https://lyceum.yandex.ru/}{Yandex Academy Lyceum}
+  in “Industrial Development” as an external student. Solved 236 problems,
+  implemented and defended 3 projects, final scored 100/100. Graduated with
+  a \href{https://alchemmist.github.io/CV/attachments/yandex-lyceum.pdf}{diploma with honors}.
+
+  \section{\mysidestyle Personal Projects}\vspace{2mm}
+
+  \begin{description}
+
+    \item[SmartCab]\small{\href{https://github.com/smart-cab}{Smart home system for schools} \hfill
+      \textsl{September 2023 — May 2024\vspace{1mm}}}\\
+      Developed design \href{https://www.figma.com/design/8H1tFpxgmIDV1xp06ndi73/SmartCab?node-id=0-1&p=f}{prototypes}.
+      Implemented them
+      (\texttt{\href{https://github.com/smart-cab/smart-cab-hub/tree/main/frontend/src}{1}},
+      \texttt{\href{https://github.com/smart-cab/smart-cab-dashboard/tree/main/frontend/src}{2}})
+      in \inlinecode{React}.
+      \href{https://github.com/smart-cab/smartcab-bot}{Wrote a bot}
+      for system administration.
+      \href{https://github.com/smart-cab/smartcab-hub/blob/main/backend/smartcab/interface/mqtt.py}{Implemented}
+      interaction with 5 smart devices via the Zigbee protocol through
+      Mosquitto broker, and 3 scenarios in the classroom.
+      Tech: \inlinecode{Python}, \inlinecode{Go},
+      \inlinecode{JavaScript}, \inlinecode{bash},
+      \inlinecode{Flask},
+      \inlinecode{sqlite}, \inlinecode{redis},
+      \inlinecode{postgres}, \inlinecode{JsSip}.
+      \vspace{3mm}
+
+    \item[Starship]\small{\href{https://github.com/starship-crew}{Text-based action game on Telegram} \hfill
+      \textsl{March 2023 — April 2023\vspace{1mm}}}\\
+      Developed mechanics for
+      \href{https://github.com/starship-crew/telegram-client/blob/main/app/handlers/fight.py}{online duels}
+      with real players in a Telegram bot. Also created a flexible
+      \href{https://github.com/starship-crew/telegram-client/blob/main/app/template.py}{message rendering engine}
+      using jinja2 templates to handle numerous scenario and environment texts.
+      Tech: \inlinecode{Python}, \inlinecode{Flask},
+      \inlinecode{alembic},
+      \inlinecode{python-telegram-bot}, \inlinecode{SQLAlchemy},
+      \inlinecode{jinja2}.
+      \vspace{3mm}
+
+    \item[Corpse]\small{\href{https://github.com/corpse-inc/corpse}{Game engine} \hfill
+      \textsl{November 2022 — January 2023\vspace{1mm}}}\\
+      As part of a team, developed a fully functional modular game engine
+      based on the \href{https://en.wikipedia.org/wiki/Entity_component_system#:~:text=Entity%E2%80%93component%E2%80%93system%20(ECS,Entity%E2%80%93Component%E2%80%93System%20layout.}{ECS architecture}.
+      Also created a survival top-down shooter game set in a zombie apocalypse.
+      Tech: \inlinecode{Python}, \inlinecode{Pygame},
+      \inlinecode{esper}, \inlinecode{pytmx}, \inlinecode{aseprite},
+      \inlinecode{Tiled}.
+
+    \end{description}
+
+    \section{\mysidestyle Custom Development}\vspace{2mm}
+
+    \begin{description}
+      \item[Telegram Bots]\small{
+          \begingroup
+          \textcolor{gray!40}{\textit{All source code publication approved}}
+          \endgroup
+        }{\hfill
+        \textsl{Summer 2024}}\vspace{2mm}
+        \begin{list2}
+        \item{Developed a
+            \href{https://github.com/alchemmist/vpn-bot}{bot} for
+            administering and selling WireGuard keys by subscription.
+            \href{https://github.com/alchemmist/vpn-bot/blob/develop/vpn_bot/handlers/monthly_analytics.py}{Implemented}
+            clear \href{https://github.com/alchemmist/vpn-bot/tree/develop?tab=readme-ov-file#demo}{analytics}
+            for clients directly in the bot.
+            Tech: \inlinecode{Python}, \inlinecode{sqlite},
+            \inlinecode{python-telegram-bot}.
+          }
+          \vspace{2mm}
+        \item{\href{https://github.com/alchemmist/content-parser}{Bot}
+            for aggregating relevant messages from chats, channels, and
+            groups by keywords.
+            Tech:
+            \inlinecode{Python},
+            \inlinecode{theleton}, \inlinecode{redis}.
+          }
+          \vspace{2mm}
+        \end{list2}
+      \item[Other Projects]\small{
+          \begingroup
+          \textcolor{gray!40}{\textit{All source code publication approved}}
+          \endgroup
+        }{\hfill
+        \textsl{Summer 2024}}\vspace{2mm}
+        \begin{list2}
+
+        \item{
+            \href{https://github.com/alchemmist/portu-hack}{Parser}
+            for the Portuguese embassy with authorization
+            (\href{https://github.com/alchemmist/portu-hack/blob/develop/parser/parser/searcher/auth.py}{\texttt{1}}),
+            captcha solving
+            (\href{https://github.com/alchemmist/portu-hack/blob/develop/parser/parser/searcher/captcha.py}{\texttt{2}}),
+            and branching form traversal
+            (\href{https://github.com/alchemmist/portu-hack/blob/develop/parser/parser/searcher/snif.py}{\texttt{3}}).
+            Created a
+            \href{https://github.com/alchemmist/portu-hack/blob/develop/parser/Dockerfile}{Docker image}
+            for containerized parsing with \inlinecode{selenium} under
+            Chromium. Configured \href{https://github.com/alchemmist/portu-hack/blob/develop/pre-commit-config.yaml}{pre-commit}
+            hooks for \inlinecode{ruff} linter and \inlinecode{pyright} static analyzer.
+            Tech: \inlinecode{Python}, \inlinecode{selenium},
+            \inlinecode{psycopg}, \inlinecode{SQLAlchemy},
+            \inlinecode{FastAPI}.}
+          \vspace{2mm}
+
+        \item{
+            \href{https://github.com/alchemmist/outline-vpn-cli}{CLI tool}
+            for secure operations on Outline servers for thousands of clients.
+            Tech: \inlinecode{Python}.}
+        \end{list2}
+
+    \end{description}
+
+    \vspace{-4mm}
+    \section{\mysidestyle Interests}\vspace{0.7mm}
+
+    {\textbf{Formal Verification:} I am taking the
+      \href{https://softwarefoundations.cis.upenn.edu}{Software Foundations}
+      course. I have read the first volume and
+      \href{https://github.com/alchemmist/coq-learning}{proved} 250
+    theorems in \inlinecode{Coq}.} \\
+
+    \vspace{-6mm}
+
+    \textbf{Linux:} I use Arch with the Hyprland compositor. I have published
+    my \href{https://github.com/alchemmist/.dotfiles}{\texttt{.dotfiles}}.
+    I wrote my Neovim
+    \href{https://github.com/alchemmist/.dotfiles/tree/main/nvim}{config}
+    and a color
+    \href{https://github.com/alchemmist/nothing.nvim}{theme} from scratch.
+    I have written over 20 custom
+    \href{https://github.com/alchemmist/.dotfiles/tree/main/scripts}{scripts}.
+
+  \end{resume}
+
+  \begin{minipage}[H]{9.18\textwidth}
+    \begin{textblock}{7}(-0.65, 15.1)
+      \begingroup
+      \hspace{35mm}
+      \hypersetup{urlcolor=gray!90}
+      \large
+      \href{https://github.com/alchemmist}{→ more projects on
+      \underline{GitHub}}
+      \endgroup
+    \end{textblock}
+
+  \end{minipage}
+
+  \clearpage
+
+  \end{document}
+
