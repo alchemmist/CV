@@ -1,36 +1,9 @@
-% Thanks for kickstart:
-% https://www.overleaf.com/latex/templates/tibault-reveyrands-resume-slash-curriculum-vitae/hxprjhpjbrcy
-
-% RESUME DOCUMENT STYLE -- Released 23 Nov 1989
-%    for LaTeX version 2.09
-% Copyright (C) 1988,1989 by Michael DeCorte
-
 \typeout{Document Style `resume' <26 Sep 89, Dec 07>.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % resume.sty
 %
 % \documentstyle{resume}
-%
-% Copyright (c) 1988 by Michael DeCorte
-% Permission to copy all or part of this work is granted, provided
-% that the copies are not made or distributed for resale, and that
-% the copyright notice and this notice are retained.
-%
-% THIS WORK IS PROVIDED ON AN "AS IS" BASIS.  THE AUTHOR PROVIDES NO
-% WARRANTY WHATSOEVER, EITHER EXPRESS OR IMPLIED, REGARDING THE WORK,
-% INCLUDING WARRANTIES WITH RESPECT TO ITS MERCHANTABILITY OR FITNESS
-% FOR ANY PARTICULAR PURPOSE.
-%
-% If you make any improvements, I'd like to hear about them.
-%
-% Michael DeCorte
-% P.O. Box 652
-% Potsdam NY 13676
-% mrd@sun.soe.clarkson.edu
-% mrd@clutx.bitnet
-%
-% Changes for LaTeX2e -- Venkat Krishnamurthy (Aug 7, 2001)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % You can have multiple style options the legal options ones are:
@@ -650,12 +623,6 @@
   \global#2=\expandafter{\@append@temp}%
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% CHAA006%vaxb.rhbnc.ac.uk@NSS.Cs.Ucl.AC.UK
-% texhax.88.078
-% is used to see if two token lists are equal
-% there must be a better way
-%
 
 \let \then = \empty
 \def \iftoks #1#2\then #3\else #4\skotfi{
@@ -799,17 +766,6 @@
 
 \let\section\@@section
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% @brief    LaTeX2e Resume Style Config
-% @url      http://linux.dsplabs.com.au/?p=54
-% @date     Decemebr 2007
-% @author   Kamil K Wojcicki
-% @info     This a fusion of resume template code by Chris Paciorek
-%           (url:
-% http://www.biostat.harvard.edu/~paciorek/computingTips/Latex_template_creating_CV_.html)
-%           and res.cls class by Michael DeCorte.
-%           I have merged these for educational purposes only.
 
 \pagestyle{empty}
 \footskip=10pt
