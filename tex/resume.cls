@@ -880,3 +880,13 @@ citecolor=blue, urlcolor=blue]{hyperref}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\definecolor{linkcolor}{RGB}{36, 84, 179}
+\hypersetup{
+  colorlinks=true,       % включаем цветные ссылки вместо рамок
+  linkcolor=blue,        % цвет внутренних ссылок (секции, главы)
+  urlcolor=linkcolor,          % цвет внешних ссылок (сайты)
+  citecolor=green        % цвет ссылок на библиографию
+}
+
