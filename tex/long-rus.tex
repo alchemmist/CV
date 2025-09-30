@@ -19,6 +19,10 @@
 % TODO: выбрать несколько жирных проектов и их расписать подробнее
 % TODO: убрать даты там где не надо
 
+\newcommand{\githubrepos}{73}
+\newcommand{\githubcommits}{1597}
+\newcommand{\githublines}{297996}
+
 \begin{document}
 
 {\vspace*{-13mm}\sc \large Гришин Антон — Backend разработчик} \\
@@ -50,9 +54,9 @@
   \vspace{-7mm}
   \section{\mysidestyle Обо мне}
   Я студент, начинающий разработчик. Программирую 4 года, за
-  это время участвовал в разработке 44 репозиториев, отправил 921
-  коммит и написал 176729 строчек кода.
-  \href{https://www.avito.ru/moskva/predlozheniya_uslug/prepodavatel_programmirovaniya_na_python_2556461612}{Преподаю}
+  это время участвовал в разработке \githubrepos\ репозиториев, отправил \githubcommits\  
+  коммитов и написал \githublines\ строчек кода.
+  \href{https://alchemmist.xyz/ru/teach}{Преподаю}
   Python, обучил $> 30$ учеников. Сооснователь и
   разработчик в \href{https://ballkit.ru/}{Баллкит}. В прошлом профессиональный
   \href{https://alchemmist.github.io/CV/attachments/sport.pdf}{волейболист}.
@@ -190,13 +194,12 @@
 
   \begin{description}
 
-      \item[Patch Loyalty]\small\href{https://github.com/ballkit}{Программа лояльности для малого бизнеса} \hfill
+      \item[Ballkit]\small\href{https://github.com/ballkit}{Программа лояльности для малого бизнеса} \hfill
       \textsl{Июль 2024 — Август 2024\vspace{1mm}}\\
-      Разработал бота в Telegram по модели SMB (Single Message Bot) на
-      \inlinecode{Go} для коробочной системы лояльности
-      \href{https://ballkit.ru}{\texttt{ballkit.ru}}.
+      С нуля спроектировал и \href{https://github.com/ballkit/ballkit-platform}{реализовал} на \inlinecode{Go} архитектуру для бота в Telegram по модели SMB (Single Message Bot) для коробочной системы лояльности
+      \href{https://ballkit.ru}{\texttt{ballkit.ru}}. 
 
-      \textbf{Технологии:}
+      Стек:
       \inlinecode{Go},
       \inlinecode{tgbotapi}, \inlinecode{grpc},
       \inlinecode{gofsm}.
@@ -221,7 +224,8 @@
       \href{https://github.com/smart-cab/smartcab-hub/blob/main/backend/smartcab/interface/mqtt.py}{Реализовал}
       взаимодействие с 5-ю умными устройствами по протокулу Zigbee, через
       брокер сообщений Mosquitto, и 3 сценария в кабинете.
-      Технологии:
+
+      Стек:
       \inlinecode{Python}, \inlinecode{Go},
       \inlinecode{JavaScript}, \inlinecode{bash},
       \inlinecode{Flask},
@@ -241,7 +245,8 @@
       сообщений в чате через jinja2 шаблоны, так как для текстовой игры
       требовалось гибко работать с большим количеством сценарных и
       пейзажных текстов.
-      Технологии:
+
+      Стек:
       \inlinecode{Python}, \inlinecode{Flask},
       \inlinecode{alembic},
       \inlinecode{python-telegram-bot}, \inlinecode{SQLAlchemy},
@@ -256,30 +261,20 @@
       игровой движок с архитектурой
       \href{https://en.wikipedia.org/wiki/Entity_component_system#:~:text=Entity%E2%80%93component%E2%80%93system%20(ECS,Entity%E2%80%93Component%E2%80%93System%20layout.}{ECS}.
         А также survival top-down шутер игру о зомби-апокалипсисе.
-        Технологии:
+
+        Стек:
         \inlinecode{Python}, \inlinecode{Pygame},
         \inlinecode{esper}, \inlinecode{pytmx}, \inlinecode{aseprite},
         \inlinecode{Tiled}.
 
         \vspace{3mm}
 
-      \item[SchoolRing]\small{\href{https://github.com/alchemmist/school-ring}{Управление
-          звонками в школах}
+      \item[Devsyringe]\small{\href{https://github.com/alchemmist/devsyringe}{CLI инструмент}
           \hfill
-        \textsl{Октябрь 2022 — Ноябрь 2022\vspace{1mm}}}\\
-        Разработал декстоп-приложение на \inlinecode{PyQt6}. Настроил
-        \href{https://github.com/alchemmist/school-ring/blob/main/.pre-commit-config.yaml}{\texttt{pre-commit}}
-        для
-        автоматической конвертации \inlinecode{.ui} файлов в
-        \inlinecode{.py}, а также
-        \href{https://github.com/alchemmist/school-ring/blob/main/.github/workflows/build.yaml}{actions}
-        для автоматической сборки нового релиза под все
-        операционные системы при каждом коммите в main. Недавно перевёл
-        проект на \href{https://astral.sh/blog/uv}{\texttt{uv}} для
-        удобного управления зависимостями.
-        Технологии:
-        \inlinecode{Python}, \inlinecode{PyQt6},
-        \inlinecode{threading}, \inlinecode{schedule}.
+        \textsl{Август 2025\vspace{1mm}}}\\
+        Разработал \href{https://devsyringe.alchemmist.xyz/}{\texttt{cli}-инструмент} для инъектирования динамических значений в файлы на основе декларативных правил из \texttt{YAML} конфигурации. Реализовал полноценный \href{https://github.com/alchemmist/devsyringe/blob/main/internal/cli/commands.go}{инструментай команд} и \href{https://github.com/alchemmist/devsyringe/blob/main/internal/cli/tui/tui.go}{\texttt{TUI}} интерфейс для управления системными процессами. Настроил пайплайн \href{https://github.com/alchemmist/devsyringe/blob/main/.github/workflows/build.yaml}{сборки} и \href{https://github.com/alchemmist/devsyringe/blob/main/.github/workflows/release.yaml}{выпуска} новых релизов. Сделал удобную установку из репзоиториев \texttt{Go}, \texttt{AUR}, \texttt{brew} для MacOS и Linux.
+
+        Стек: \inlinecode{Go}, \inlinecode{bubbletea}, \inlinecode{cobra}.
 
     \end{description}
 
@@ -301,14 +296,16 @@
             наглядную
             \href{https://github.com/alchemmist/vpn-bot/tree/develop?tab=readme-ov-file#demo}{аналитику}
             по клиентам прямо в боте.
-            Технологии: \inlinecode{Python}, \inlinecode{sqlite},
+
+            Стек: \inlinecode{Python}, \inlinecode{sqlite},
             \inlinecode{python-telegram-bot}.
           }
           \vspace{2mm}
         \item{\href{https://github.com/alchemmist/content-parser}{Бот}
             для агрегирования релевантных сообщений из чатов, каналов и
             групп по ключевым словам.
-            Технологии:
+
+            Стек:
             \inlinecode{Python},
             \inlinecode{theleton}, \inlinecode{redis}
           }
@@ -341,7 +338,8 @@
             \href{https://github.com/alchemmist/portu-hack/blob/develop/pre-commit-config.yaml}{\texttt{pre-commit}}
             хуки для линтера
             \inlinecode{ruff} и статического анализатора \inlinecode{pyright}.
-            Технологии: \inlinecode{Python}, \inlinecode{selenium},
+
+            Стек: \inlinecode{Python}, \inlinecode{selenium},
             \inlinecode{psycopg},
             \inlinecode{SQLALchemy},
           \inlinecode{FastAPI}.}
@@ -357,7 +355,8 @@
             \href{https://github.com/alchemmist/outline-vpn-cli}{Cli-инструмент}
             для безопасного проведения операций на
             Outline серверах на тысячах клиентов.
-          Технологии: \inlinecode{Python}.}
+
+          Стек: \inlinecode{Python}.}
         \end{list2}
 
     \end{description}
@@ -381,26 +380,13 @@
         на
         \inlinecode{React}.
 
-        \textbf{Технологии:} \inlinecode{Java},
+        Стек: \inlinecode{Java},
         \inlinecode{SpringBoot}, \inlinecode{Lombok},
         \inlinecode{JavaScript}, \inlinecode{React}, \inlinecode{Go},
         \inlinecode{crypto}, \inlinecode{pgx}.
 
     \end{description}
   \end{resume}
-
-  \begin{minipage}[H]{9.18\textwidth}
-    \begin{textblock}{7}(-0.65, 15.1)
-      \begingroup
-      \hspace{35mm}
-      \hypersetup{urlcolor=gray!90}
-      \large
-      \href{https://github.com/alchemmist}{→ больше проектов на
-      \underline{GitHub}}
-      \endgroup
-    \end{textblock}
-
-  \end{minipage}
 
   \clearpage
 

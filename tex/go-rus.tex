@@ -107,17 +107,24 @@
   \section{\mysidestyle Опыт}\vspace{2mm}
 
   \begin{description}
-
-    \item[Patch Loyalty] Программа лояльности для малого бизнеса \hfill
+      \item[Ballkit]\small\href{https://github.com/ballkit}{Программа лояльности для малого бизнеса} \hfill
       \textsl{Июль 2024 — Август 2024\vspace{1mm}}\\
-      Разработал бота в Telegram по модели SMB (Single Message Bot) на
-      \inlinecode{Go} для коробочной системы лояльности
-      \href{https://ballkit.ru}{\texttt{ballkit.ru}}.
+      С нуля спроектировал и \href{https://github.com/ballkit/ballkit-platform}{реализовал} на \inlinecode{Go} архитектуру для бота в Telegram по модели SMB (Single Message Bot) для коробочной системы лояльности
+      \href{https://ballkit.ru}{\texttt{ballkit.ru}}. 
 
-      \textbf{Технологии:}
+      Стек:
       \inlinecode{Go},
       \inlinecode{tgbotapi}, \inlinecode{grpc},
       \inlinecode{gofsm}.
+
+      \item[Devsyringe]\small{\href{https://github.com/alchemmist/devsyringe}{CLI инструмент}
+          \hfill
+        \textsl{Август 2025\vspace{1mm}}}\\
+        Разработал \href{https://devsyringe.alchemmist.xyz/}{\texttt{cli}-инструмент} для инъектирования динамических значений в файлы на основе декларативных правил из \texttt{YAML} конфигурации. Реализовал полноценный \href{https://github.com/alchemmist/devsyringe/blob/main/internal/cli/commands.go}{инструментай команд} и \href{https://github.com/alchemmist/devsyringe/blob/main/internal/cli/tui/tui.go}{\texttt{TUI}} интерфейс для управления системными процессами. Настроил пайплайн \href{https://github.com/alchemmist/devsyringe/blob/main/.github/workflows/build.yaml}{сборки} и \href{https://github.com/alchemmist/devsyringe/blob/main/.github/workflows/release.yaml}{выпуска} новых релизов. Сделал удобную установку из репзоиториев \texttt{Go}, \texttt{AUR}, \texttt{brew} для MacOS и Linux.
+
+        Стек: \inlinecode{Go}, \inlinecode{bubbletea}, \inlinecode{cobra}.
+
+
   \end{description}
   \vspace{-4mm}
   \section{\mysidestyle Интересы}\vspace{0.7mm}
