@@ -37,7 +37,7 @@
 
   \vspace{-7mm}
   \section{\mysidestyle Обо мне}
-  Я студент, начинающий разработчик. Программирую 4 года, за
+  Я студент и разработчик. Программирую 4 года, за
   это время участвовал в разработке 44 репозиториев, отправил 921
   коммит и написал 176729 строчек кода.
   \href{https://www.avito.ru/moskva/predlozheniya_uslug/prepodavatel_programmirovaniya_na_python_2556461612}{Преподаю}
@@ -45,10 +45,19 @@
   разработчик в \href{https://ballkit.ru/}{Баллкит}. В прошлом профессиональный
   \href{https://alchemmist.github.io/CV/attachments/sport.pdf}{волейболист}.
 
-  \section{\mysidestyle Образование}
-  \href{https://centraluniversity.ru/}{Центральный Университет} —
-  Математика и компьютерные науки, 2028 \textit{(1 курс)}.
-  Направление «Разработка». Траектория «Computer Science Research».
+  {\let\makelabel\descriptionlabel
+\renewcommand*\descriptionlabel[1]{\hspace\labelsep\normalfont #1}
+    \section{\mysidestyle Образование}\vspace{0.7mm}
+  \begin{description}[leftmargin=0pt, itemindent=*, itemsep=8pt]
+      \item[\href{https://cu.ru}{Центральный университет}.] Математика и компьютерные науки, 2028 \textit{(2 курс)}. Направление «Разработка». Траектория «Computer Science Research».
+
+    \item[\href{https://lyceum.yandex.ru/}{Лицей
+  Академии Яндекса}.] Окончил курс
+   по «Промышленной Разработке» с
+  \href{https://alchemmist.github.io/CV/attachments/yandex-lyceum.pdf}{аттестатом
+  с отличием}, защитив финальный \href{https://github.com/starship-crew}{проект} на 100/100 баллов.
+
+    \end{description}}
 
   \section{\mysidestyle Достижения}
   Финалист
@@ -60,7 +69,6 @@
   \inlinecode{RabbitMQ (FastStream)},
   \inlinecode{FastAPI},
   \inlinecode{OAuth}.
-  % TODO: вложить хакатон на github и добавить ссылку
 
   \href{https://alchemmist.github.io/CV/attachments/scince-for-life-win.pdf}{Победитель}
   научно-практической конференции
@@ -76,51 +84,38 @@
   \href{https://alchemmist.github.io/CV/attachments/informatics-olimpic.pdf}{призёр}
   3-й степени, олимпиады МПГУ по информатике: «Прикладная информатика»
 
-  \section{\mysidestyle Опыт}\vspace{0.7mm}
+    \section{\mysidestyle Проекты}\vspace{0.7mm}
   \begin{description}[leftmargin=0pt, itemindent=*, itemsep=8pt]
-    \item[Ballkit:] Программа лояльности для малого бизнеса.
-      Разработал бота в Telegram по модели SMB\textit{(Single Message Bot)} на
-      \inlinecode{Go} для коробочной системы лояльности
-      \href{https://ballkit.ru}{\texttt{ballkit.ru}}.
-      Технологии:
-      \inlinecode{Go},
-      \inlinecode{tgbotapi}, \inlinecode{grpc},
-      \inlinecode{gofsm}.
 
-    \item[Заказная разработка:] Парсеры сложных сайтов
-      (\href{https://github.com/alchemmist/portu-hack}{1}).  с
-      механизмами авторизации
-      (\href{https://github.com/alchemmist/portu-hack/blob/develop/parser/parser/searcher/auth.py}{\texttt{1}}),
-      разрешения капчи
-      (\href{https://github.com/alchemmist/portu-hack/blob/develop/parser/parser/searcher/captcha.py}{\texttt{2}}),
-      и ветвящимся обходом форм
-      (\href{https://github.com/alchemmist/portu-hack/blob/develop/parser/parser/searcher/snif.py}{\texttt{3}}).
-      Написал
-      \href{https://github.com/alchemmist/portu-hack/blob/develop/parser/Dockerfile}{Docker
-      образ} для контейнеризованного парсинга
-      \inlinecode{selenium} из под движка \texttt{Chromium}.
-      Настроил
-      \href{https://github.com/alchemmist/portu-hack/blob/develop/pre-commit-config.yaml}{\texttt{pre-commit}}
-      хуки для линтера
-      \inlinecode{ruff} и статического анализатора \inlinecode{pyright}.
-      Технологии:
-      \inlinecode{Python}, \inlinecode{selenium},
-      \inlinecode{psycopg},
-      \inlinecode{SQLALchemy},
-      \inlinecode{FastAPI}.
+    \item[Ballkit:] Программа лояльности для малого бизнеса. 
+      С нуля спроектировал и \href{https://github.com/ballkit/ballkit-platform}{реализовал} на \inlinecode{Go} архитектуру Telegram-бота по модели SMB (Single Message Bot) для коробочной системы лояльности
+      \href{https://ballkit.ru}{\texttt{ballkit.ru}}. 
+      Стек: \inlinecode{Go}, \inlinecode{tgbotapi}, \inlinecode{grpc}, \inlinecode{gofsm}.
 
-      \vspace{-2mm}
-    \item[]\vspace{1mm}\hypersetup{urlcolor=gray!90}\large
-      \href{https://github.com/alchemmist}{→ больше проектов на
-      \underline{GitHub}}
-      \vspace{-3mm}
+    \item[Заказная разработка:] Создал \href{https://github.com/alchemmist/portu-hack}{парсер сложных сайтов}
+      с авторизацией, решением капчи и ветвящимся обходом форм.
+      Написал \href{https://github.com/alchemmist/portu-hack/blob/develop/parser/Dockerfile}{Docker-образ} для контейнеризованного парсинга \inlinecode{selenium} на движке Chromium.
+      Настроил \inlinecode{pre-commit} хуки для \inlinecode{ruff} и \inlinecode{pyright}.
+      Технологии: \inlinecode{Python}, \inlinecode{selenium}, \inlinecode{SQLAlchemy}, \inlinecode{FastAPI}.
+
+    \item[SmartCab:] \href{https://github.com/smart-cab}{Система умного дома} для школы.
+      Разработал \href{https://www.figma.com/design/8H1tFpxgmIDV1xp06ndi73/SmartCab}{дизайн-прототипы} админ-панели и планшета управления, 
+      сверстал их на \inlinecode{React} и \href{https://github.com/smart-cab/smartcab-bot}{написал бота} для администрирования.
+      Реализовал связь с 5 устройствами по Zigbee через брокер Mosquitto и разработал 3 сценария взаимодействия.
+      Стек: \inlinecode{Python}, \inlinecode{Go}, \inlinecode{JavaScript}, \inlinecode{Flask}, \inlinecode{redis}, \inlinecode{postgres}.
+
+    \item[Devsyringe:] \href{https://devsyringe.alchemmist.xyz/}{CLI-инструмент} для инъекции значений в файлы по YAML-правилам.
+      Реализовал \href{https://github.com/alchemmist/devsyringe/blob/main/internal/cli/tui/tui.go}{TUI-интерфейс}, командную оболочку и пайплайны 
+      \href{https://github.com/alchemmist/devsyringe/blob/main/.github/workflows/release.yaml}{релизов}. 
+      Настроил установку через \texttt{Go}, \texttt{AUR} и \texttt{brew}.
+      Стек: \inlinecode{Go}, \inlinecode{bubbletea}, \inlinecode{cobra}.
+
+      \item[Corpse:] \href{https://github.com/alchemmist/corpse}{Игровой движок} и survival top-down шутер о зомби-апокалипсисе. 
+      В команде разработали полнофункциональный модульный движок с архитектурой ECS, систему спрайтов и карту уровня из \texttt{Tiled}.
+      Стек: \inlinecode{Python}, \inlinecode{Pygame}, \inlinecode{esper}, \inlinecode{pytmx}, \inlinecode{aseprite}, \inlinecode{Tiled}.
+
   \end{description}
-  \section{\mysidestyle Сертификаты}
-  \textbf{Яндекс Лицей}. Окончил курс
-  \href{https://lyceum.yandex.ru/}{Лицея
-  Академии Яндекса} по «Промышленной Разработке» с
-  \href{https://alchemmist.github.io/CV/attachments/yandex-lyceum.pdf}{аттестатом
-  с отличием}, защитив финальный проект на 100/100 баллов.
+
 
   \section{\mysidestyle Интересы}\vspace{0.7mm}
 
