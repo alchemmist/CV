@@ -1,4 +1,4 @@
-<h2><img src="./images/logo.svg" alt="Favicon Preview" width="85" align="center"> Resume (CV)</h2>
+<h2><img src="./images/logo.svg" alt="Favicon Preview" width="75" align="center"> Resume (CV)</h2>
 
 [![Github](https://img.shields.io/badge/alchemmist%2FCV-blue?logo=github&label=github&color=blue)](https://github.com/alchemmist/CV)
 ![Last commit](https://img.shields.io/github/last-commit/alchemmist/CV?style=flat) ![Stars](https://img.shields.io/github/stars/alchemmist/CV?style=flat)
@@ -68,5 +68,11 @@ Licensed under of The [MIT](./LICENSE) License.
 - Grigory Petrov
 - Pavel Sokolov
 - Mikhail Flenov
-- Yulia Lukyanova
+- Julia Lukyanova
 - Ruslan Masgutov
+- Alexey Goloburdin
+- Mark Melixetyan
+- Kristina Lozbina
+- Ksenia Vdovkina
+
+If you find your name here and you **don't want** for put your name here, text me on email: [`anton.ingrish@gmail.com`](mailto:anton.ingrish@gmail.com). If you belive I make a typo in your name, sorry for that and report it in issue.
