@@ -3,8 +3,8 @@
 \definecolor{sidebarcolor}{RGB}{0, 49, 83}
 
 \usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
 \usepackage[english,russian]{babel}
-\usepackage[T1]{fontenc}
 \usepackage{fontawesome}
 
 \newcommand{\githubrepos}{73}
@@ -39,10 +39,10 @@
     \end{textblock}
   \end{minipage}
 
-
   \vspace{-7mm}
   \section{\mysidestyle Обо мне}
-  Я студент и разработчик: участвовал в разработке \githubrepos\ репозиториев, отправил \githubcommits\  
+  Я студент и разработчик: участвовал в разработке
+  \githubrepos\ репозиториев, отправил \githubcommits\
   коммитов и написал \githublines\ строчек кода.
   \href{https://alchemmist.xyz/ru/teach}{Преподаю}
   Python, обучил $> 30$ учеников. В прошлом профессиональный
@@ -53,23 +53,6 @@
   Математика и компьютерные науки, 2028 \textit{(2 курс)}.
   Направление «Разработка». Траектория «Computer Science Research».
   % TODO: уточнить трек
-
-  \section{\mysidestyle Навыки}
-
-  \vspace{0.4mm}
-  \begin{description}[leftmargin=0pt, itemindent=*, itemsep=0.2pt]
-    \item[Go:] \inlinecode{http}, \inlinecode{grpc},
-      \inlinecode{protobuf}, \inlinecode{tgbotapi},
-      \inlinecode{reflect}, \inlinecode{gofsm}.
-    \item[Databases:] \inlinecode{postgres}, \inlinecode{sqlite},
-      \inlinecode{redis}, \inlinecode{Yandex Object Storage}.
-    \item[Message brokers:] \inlinecode{RabbitMQ}, \inlinecode{Mosquitto}.
-    \item[Other technologies:] \inlinecode{SQL}, \inlinecode{Java},
-      \inlinecode{JavaScript}, \inlinecode{bash}.
-    \item[Dev tools:] \inlinecode{Docker}, \inlinecode{Podman},
-      \inlinecode{Make}, \inlinecode{CI/CD}, \inlinecode{Linux},
-      \inlinecode{Git}
-  \end{description}
 
   \section{\mysidestyle Достижения}
   Прошёл в
@@ -109,23 +92,46 @@
   \section{\mysidestyle Опыт}\vspace{2mm}
 
   \begin{description}[leftmargin=0pt, itemindent=*, itemsep=8pt]
-      \item[Ballkit]\small\href{https://github.com/ballkit}{Программа лояльности для малого бизнеса} \hfill
-      \textsl{Июль 2024 — Август 2024\vspace{1mm}}\\
-      С нуля спроектировал и \href{https://github.com/ballkit/ballkit-platform}{реализовал} на \inlinecode{Go} архитектуру для бота в Telegram по модели SMB (Single Message Bot) для коробочной системы лояльности
-      \href{https://ballkit.ru}{\texttt{ballkit.ru}}. 
+    \item[Ballkit]\small\href{https://github.com/ballkit}{Программа
+      лояльности для малого бизнеса}
+      С нуля спроектировал и
+      \href{https://github.com/ballkit/ballkit-platform}{реализовал}
+      на \inlinecode{Go} архитектуру для бота в Telegram по модели
+      SMB (Single Message Bot) для коробочной системы лояльности
+      \href{https://ballkit.ru}{\texttt{ballkit.ru}}.
 
       Стек:
       \inlinecode{Go},
       \inlinecode{tgbotapi}, \inlinecode{grpc},
       \inlinecode{gofsm}.
 
-      \item[Devsyringe]\small{\href{https://github.com/alchemmist/devsyringe}{CLI инструмент}
-          \hfill
-        \textsl{Август 2025\vspace{1mm}}}\\
-        Разработал \href{https://devsyringe.alchemmist.xyz/}{\texttt{cli}-инструмент} для инъектирования динамических значений в файлы на основе декларативных правил из \texttt{YAML} конфигурации. Реализовал полноценный \href{https://github.com/alchemmist/devsyringe/blob/main/internal/cli/commands.go}{инструментай команд} и \href{https://github.com/alchemmist/devsyringe/blob/main/internal/cli/tui/tui.go}{\texttt{TUI}} интерфейс для управления системными процессами. Настроил пайплайн \href{https://github.com/alchemmist/devsyringe/blob/main/.github/workflows/build.yaml}{сборки} и \href{https://github.com/alchemmist/devsyringe/blob/main/.github/workflows/release.yaml}{выпуска} новых релизов. Сделал удобную установку из репзоиториев \texttt{Go}, \texttt{AUR}, \texttt{brew} для MacOS и Linux.
+    \item[Devsyringe:]
+      \href{https://devsyringe.alchemmist.xyz/}{CLI-инструмент} для
+      инъекции значений в файлы по YAML-правилам.
+      Реализовал
+      \href{https://github.com/alchemmist/devsyringe/blob/main/internal/cli/tui/tui.go}{TUI-интерфейс},
+      командную оболочку и пайплайны
+      \href{https://github.com/alchemmist/devsyringe/blob/main/.github/workflows/release.yaml}{релизов}.
+      Настроил установку через \texttt{Go}, \texttt{AUR} и \texttt{brew}.
+      Стек: \inlinecode{Go}, \inlinecode{bubbletea}, \inlinecode{cobra}.
 
-        Стек: \inlinecode{Go}, \inlinecode{bubbletea}, \inlinecode{cobra}.
+    \item[lazy-tmux:]
+      \href{https://lazy-tmux.xyz}{CLI-инструмент} для
+      создания снимков \texttt{tmux} сессий и их ленивого восстановления.
+      Реализовал сериализацию структуры сессий и
+      опциональный \texttt{scrollback}. Написал
+      \href{https://github.com/alchemmist/lazy-tmux}{TUI-браузер}
+      с древовидным представлением, \texttt{fuzzy} поиском и CRUD
+      операциями над сессиями. Добавил демон автосохранения,
+      сортировку сессий/окон и \texttt{fzf} backend.
+      Стек: \inlinecode{Go}, \inlinecode{bubbletea},
+      \inlinecode{cobra}, \inlinecode{tmux}.
 
+    \item[SmartCab:] \href{https://github.com/smart-cab}{Система умного дома} для школы.
+      Разработал \href{https://www.figma.com/design/8H1tFpxgmIDV1xp06ndi73/SmartCab}{дизайн-прототипы} админ-панели и планшета управления, 
+      сверстал их на \inlinecode{React} и \href{https://github.com/smart-cab/smartcab-bot}{написал бота} для администрирования.
+      Реализовал связь с 5 устройствами по Zigbee через брокер Mosquitto и разработал 3 сценария взаимодействия.
+      Стек: \inlinecode{Python}, \inlinecode{Go}, \inlinecode{JavaScript}, \inlinecode{Flask}, \inlinecode{redis}, \inlinecode{postgres}.
 
   \end{description}
   \vspace{-4mm}
@@ -148,6 +154,21 @@
   \href{https://github.com/alchemmist/nothing.nvim}{тему}.
   Написал более 20 кастомных
   \href{https://github.com/alchemmist/.dotfiles/tree/main/scripts}{скриптов}.
+
+  \section{\mysidestyle Навыки}
+  \inlinecode{Go}, \inlinecode{http}, \inlinecode{grpc},
+  \inlinecode{protobuf}, \inlinecode{tgbotapi},
+  \inlinecode{reflect}, \inlinecode{gofsm}, \inlinecode{postgres},
+  \inlinecode{sqlite},
+  \inlinecode{redis}, \inlinecode{Yandex Object Storage},
+  \inlinecode{RabbitMQ}, \inlinecode{Mosquitto},
+  \inlinecode{SQL}, \inlinecode{Java},
+  \inlinecode{JavaScript}, \inlinecode{bash},
+  \inlinecode{Docker}, \inlinecode{Podman},
+  \inlinecode{Make}, \inlinecode{CI/CD}, \inlinecode{Linux},
+  \inlinecode{Git}, \inlinecode{Python}, \inlinecode{FastAPI},
+  \inlinecode{SQLAlchemy}, \inlinecode{faststream},
+  \inlinecode{alembic}, \inlinecode{pytest},
 
 \end{resume}
 
