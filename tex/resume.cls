@@ -749,7 +749,7 @@
 \evensidemargin 0pt
 \marginparwidth 0pt
 \parindent 0pt
-\parskip \baselineskip
+\parskip 0.8\baselineskip
 \setcounter{secnumdepth}{0}
 \def\@listI{\leftmargin\leftmargini
   \topsep 0pt
