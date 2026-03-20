@@ -13,3 +13,15 @@
 *.blg
 *.bbl
 *.run.xml
+
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+*.pdf
+
+!pdf/*.pdf
