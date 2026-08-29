@@ -39,6 +39,7 @@ citecolor=blue, urlcolor=blue]{hyperref}
 You can build it with make:
 
 ```sh
+brew install texlive
 make build
 ```
 

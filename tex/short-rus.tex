@@ -41,12 +41,25 @@
 
   \vspace{-7mm}
   \section{\mysidestyle Обо мне}
-  Я студент и разработчик: участвовал в разработке
-  \githubrepos\ репозиториев, отправил \githubcommits\
-  коммитов и написал \githublines\ строчек кода.
+  Backend-разработчик и студент Центрального университета.
+  Развиваю инфраструктуру высоконагруженных сервисов, автоматизирую
+  CI/CD и процессы разработки.
   \href{https://alchemmist.xyz/ru/teach}{Преподаю}
-  Python, обучил $> 30$ учеников. В прошлом профессиональный
+  Python, обучил более 30 учеников. В прошлом профессиональный
   \href{https://alchemmist.github.io/CV/attachments/sport.pdf}{волейболист}.
+
+  \section{\mysidestyle Опыт работы}\vspace{0.7mm}
+  \textbf{Яндекс:} с мая 2026 года развиваю инфраструктуру
+  высоконагруженных сервисов:
+  \begin{itemize}[leftmargin=4mm, itemsep=0pt, topsep=1pt, parsep=0pt]
+    \item перевёл деплой на InfraCtl и Starlark, унифицировал конфигурации;
+    \item разработал сценарии полного и выборочного релиза из PR;
+    \item внедрил единое форматирование и CI-линтинг, улучшил мониторинг и
+      автоматизировал доставку динамических конфигураций и ресурсов.
+  \end{itemize}\vspace{-2mm}
+  Стек: \inlinecode{Python}, \inlinecode{C++}, \inlinecode{Starlark},
+  \inlinecode{Arcadia CI}, \inlinecode{InfraCtl}, \inlinecode{Y.Deploy},
+  \inlinecode{Logbroker}, \inlinecode{Monium}.
 
   {\let\makelabel\descriptionlabel
     \renewcommand*\descriptionlabel[1]{\hspace\labelsep\normalfont #1}
@@ -95,7 +108,8 @@
   3-й степени, олимпиады МПГУ по информатике: «Прикладная информатика»
 
   \section{\mysidestyle Проекты}\vspace{0.7mm}
-  \begin{description}[leftmargin=0pt, itemindent=*, itemsep=8pt]
+  \begin{description}[leftmargin=0pt, itemindent=*, itemsep=3pt, topsep=2pt,
+      parsep=0pt]
 
     \item[Ballkit:] Программа лояльности для малого бизнеса.
       С нуля спроектировал и
@@ -106,38 +120,26 @@
       Стек: \inlinecode{Go}, \inlinecode{tgbotapi},
       \inlinecode{grpc}, \inlinecode{gofsm}.
 
-    \item[SmartCab:] \href{https://github.com/smart-cab}{Система
-      умного дома} для школы.
-      Разработал
-      \href{https://www.figma.com/design/8H1tFpxgmIDV1xp06ndi73/SmartCab}{дизайн-прототипы}
-      админ-панели и планшета управления,
-      сверстал их на \inlinecode{React} и
-      \href{https://github.com/smart-cab/smartcab-bot}{написал бота}
-      для администрирования.
-      Реализовал связь с 5 устройствами по Zigbee через брокер
-      Mosquitto и разработал 3 сценария взаимодействия.
-      Стек: \inlinecode{Python}, \inlinecode{Go},
-      \inlinecode{JavaScript}, \inlinecode{Flask},
-      \inlinecode{redis}, \inlinecode{postgres}.
-
-    \item[Devsyringe:]
-      \href{https://devsyringe.alchemmist.xyz/}{CLI-инструмент} для
-      инъекции значений в файлы по YAML-правилам.
-      Реализовал
-      \href{https://github.com/alchemmist/devsyringe/blob/main/internal/cli/tui/tui.go}{TUI-интерфейс},
-      командную оболочку и пайплайны
-      \href{https://github.com/alchemmist/devsyringe/blob/main/.github/workflows/release.yaml}{релизов}.
-      Настроил установку через \texttt{Go}, \texttt{AUR} и \texttt{brew}.
-      Стек: \inlinecode{Go}, \inlinecode{bubbletea}, \inlinecode{cobra}.
-
     \item[lazy-tmux:]
-      \href{https://github.com/alchemmist/lazy-tmux}{Инструмент для
-      управления tmux-сессиями} с ленивой загрузкой конфигураций и плагинов.
-      Реализовал динамическую инициализацию окон и панелей, настройку
-      горячих клавиш и удобный TUI для навигации между сессиями.
-      Позволяет быстро разворачивать и сохранять рабочие окружения разработчика.
-      Стек: \inlinecode{Go}, \inlinecode{tcell},
-      \inlinecode{bubbletea}, \inlinecode{tmux}.
+      \href{https://github.com/alchemmist/lazy-tmux}{CLI для сохранения и
+      ленивого восстановления tmux-сессий}, набравший 225+ звёзд на GitHub.
+      Реализовал TUI с fuzzy-поиском, фоновое автосохранение и интеграции с
+      Codex и Claude Code. Стек: \inlinecode{Go}, \inlinecode{bubbletea},
+      \inlinecode{tmux}.
+
+    \item[monori:]
+      \href{https://github.com/alchemmist/monori}{Self-hosted сервис для
+      управления личным бюджетом}. Реализовал импорт банковских выписок с
+      автокатегоризацией, годовую бюджетную сетку и дашборд с аналитикой.
+      Стек: \inlinecode{Python}, \inlinecode{FastAPI}, \inlinecode{React},
+      \inlinecode{TypeScript}, \inlinecode{SQLite}, \inlinecode{Docker}.
+
+    \item[Quality Graph:]
+      \href{https://github.com/alchemmist/quality-graph}{Декларативный
+      оркестратор проверок качества для GitHub Actions}. Реализовал граф
+      зависимостей, единый протокол результатов и публикацию аннотаций,
+      отчётов и approvals. Стек: \inlinecode{Python},
+      \inlinecode{GitHub Actions}, \inlinecode{YAML}.
 
   \end{description}
 
