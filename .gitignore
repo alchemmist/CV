@@ -25,3 +25,6 @@
 *.pdf
 
 !pdf/*.pdf
+!images/yandex-mark.pdf
+
+!images/blog-logo.pdf
