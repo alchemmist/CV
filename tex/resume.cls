@@ -831,10 +831,12 @@
 
 \newlength\SidebarWidth
 \setlength\SidebarWidth{2cm}
+\newlength\SidebarOffset
+\setlength\SidebarOffset{-3cm}
 
 % Рисуем полосу на фоне каждой страницы
 \AddToShipoutPictureBG{%
-  \put(-3cm,0){%
+  \put(\SidebarOffset,0){%
     \color{sidebarcolor}%
     \rule{\SidebarWidth}{\paperheight}%
   }%
@@ -862,6 +864,42 @@
 \usepackage{enumitem}
 
 \usepackage{graphicx,wrapfig}
+\newcommand{\faAlcehmmist}{\raisebox{\dimexpr0.5ex-0.5\height\relax}{\includegraphics[height=1em]{../images/blog-logo.pdf}}}
+\ExplSyntaxOn
+\clist_new:N \g_resume_sidebar_logos_clist
+\box_new:N \l_resume_sidebar_logo_box
+\dim_new:N \l_resume_sidebar_logo_width_dim
+\dim_new:N \l_resume_sidebar_logo_x_dim
+\dim_new:N \l_resume_sidebar_logo_y_dim
+\NewDocumentCommand \sidebarlogos { m }
+  { \clist_gset:Nn \g_resume_sidebar_logos_clist { #1 } }
+\cs_new_protected:Npn \resume_sidebar_logos_draw:
+  {
+    \group_begin:
+    \dim_set:Nn \l_resume_sidebar_logo_x_dim
+      { \dim_max:nn { -\hoffset } { \SidebarOffset } }
+    \dim_set:Nn \l_resume_sidebar_logo_width_dim
+      { \SidebarOffset + \SidebarWidth - \l_resume_sidebar_logo_x_dim - 4mm }
+    \dim_set:Nn \l_resume_sidebar_logo_x_dim
+      { ( \l_resume_sidebar_logo_x_dim + \SidebarOffset + \SidebarWidth ) / 2 }
+    \dim_set:Nn \l_resume_sidebar_logo_y_dim { 6mm - \voffset }
+    \clist_map_inline:Nn \g_resume_sidebar_logos_clist
+      {
+        \hbox_set:Nn \l_resume_sidebar_logo_box
+          {
+            \includegraphics
+              [width=\l_resume_sidebar_logo_width_dim,height=14mm,keepaspectratio]
+              {##1}
+          }
+        \put(\dim_use:N \l_resume_sidebar_logo_x_dim,\dim_use:N \l_resume_sidebar_logo_y_dim)
+          { \makebox(0,0)[b]{\box_use:N \l_resume_sidebar_logo_box} }
+        \dim_add:Nn \l_resume_sidebar_logo_y_dim
+          { \box_ht:N \l_resume_sidebar_logo_box + \box_dp:N \l_resume_sidebar_logo_box + 3mm }
+      }
+    \group_end:
+  }
+\AddToShipoutPictureFG{\AtPageLowerLeft{\resume_sidebar_logos_draw:}}
+\ExplSyntaxOff
 \usepackage{url}
 \usepackage[unicode, colorlinks=true, pdfstartview=FitV, linkcolor=blue,
 citecolor=blue, urlcolor=blue]{hyperref}
@@ -889,5 +927,3 @@ citecolor=blue, urlcolor=blue]{hyperref}
   urlcolor=linkcolor,          % цвет внешних ссылок (сайты)
   citecolor=green        % цвет ссылок на библиографию
 }
-
-
