@@ -49,14 +49,19 @@
 
   \section{\mysidestyle Опыт работы}\vspace{0.7mm}
   Яндекс --- стажёр-разработчик \hfill {\color{black!50}\textit{май - сентябрь 2026}}\\[1.5mm]
-  Пользовательские сессии и логи Поиска, \texttt{HitMaster}:
+  Пользовательские сессии и логи Поиска, \texttt{HitMaster}.
+  Масштаб основного \texttt{production}: $\sim$4,8 тыс. подов,
+  $\sim$47 тыс. ядер \texttt{CPU}, $\sim$58 ТиБ выделенной \texttt{RAM}.
+  Решардеры принимают в среднем $\sim$5,8 млн записей/с;
+  основные потоки \texttt{Logbroker} --- $\sim$11 ГБ/с чтения
+  и $\sim$7 ГБ/с записи (14--20 сентября 2026).
   \begin{itemize}[leftmargin=4mm, itemsep=0pt, topsep=1pt, parsep=0pt, label=\raisebox{0.2ex}{\scalebox{0.6}{\textbullet}}]
-    \item Перевёл деплой двух проектов на \texttt{InfraCtl}: разработал
-        генераторы спецификаций на \texttt{Starlark}, разделил монолитные
-        стейджи по направлениям обработки данных и встроил их в релизный процесс.
-    \item Сделал \texttt{InfraCtl} единым источником данных для генераторов
-        конфигов, графов обработки и мониторинга. Вынес общую модель стейджей и
-        расчёт ресурсов в переиспользуемую \texttt{Python}-библиотеку.
+    \item Перевёл деплой двух проектов на \texttt{InfraCtl}: генераторы на
+        \texttt{Starlark}, разделение стейджей по направлениям обработки
+        и интеграция в релизный процесс.
+    \item Объединил модель стейджей и расчёт ресурсов в \texttt{Python}-библиотеке.
+        Генерация конфигов, графы обработки и мониторинг используют
+        \texttt{InfraCtl} как единый источник данных.
     \item Подключил \texttt{REX} для обновления геобазы в Поиске. Реализовал
         \texttt{HTTP}-обработчик и потокобезопасную замену геобазы. Сократил
         лаг доставки геобазы до нескольких минут.
@@ -71,26 +76,23 @@
         по алертам технических метрик. Для выкаток из \texttt{PR}
         реализовал возврат к последнему успешному полному релизу с защитой
         от повторных и устаревших сигналов.
-    \item Согласовал и настроил автоформатирование \texttt{Python}, \texttt{C++}
-        и \texttt{Starlark}: локальные хуки, \texttt{CI}-линтинг и
-        \texttt{commit-suggest} в \texttt{PR}. В рамках этой задачи создал
-        \href{https://fq.alchemmist.xyz}{\texttt{format-quorum}} и рассказал про него на
-        \href{https://www.youtube.com/watch?v=cz_K6YEIQho}{Хурале}.
+    \item Настроил автоформатирование \texttt{Python}, \texttt{C++} и \texttt{Starlark}:
+        хуки, \texttt{CI}-линтинг, \texttt{commit-suggest}.
+        Создал \href{https://fq.alchemmist.xyz}{\texttt{format-quorum}},
+        представил на \href{https://www.youtube.com/watch?v=cz_K6YEIQho}{Хурале}.
   \end{itemize}\vspace{-2mm}
   Стек: \inlinecode{Python}, \inlinecode{C++}, \inlinecode{Starlark},
   \inlinecode{Arcadia CI}, \inlinecode{InfraCtl}, \inlinecode{Y.Deploy},
   \inlinecode{Logbroker}, \inlinecode{Monium}.
 
   \section{\mysidestyle Опыт на Go}
-  Спроектировал и реализовал на \texttt{Go} архитектуру
-  \href{https://github.com/ballkit/ballkit-platform}{Telegram-бота Ballkit}
-  для программы лояльности малого бизнеса: \texttt{gRPC}, \texttt{gofsm}.
+  Реализовал архитектуру \href{https://github.com/ballkit/ballkit-platform}{Telegram-бота Ballkit}
+  на \texttt{Go}: \texttt{gRPC}, \texttt{gofsm}.
   Разработал \href{https://github.com/alchemmist/lazy-tmux}{\texttt{lazy-tmux}}:
-  сохранение и ленивое восстановление сессий \texttt{tmux},
-  \texttt{TUI} с поиском и демон автосохранения.
+  восстановление сессий, \texttt{TUI} с поиском и автосохранение.
   Создал \href{https://github.com/alchemmist/devsyringe}{\texttt{Devsyringe}} ---
-  \texttt{CLI} для подстановки значений по \texttt{YAML}-спецификациям.
-  Стек инструментов: \texttt{Bubble Tea}, \texttt{Lip Gloss}, \texttt{Cobra}.
+  \texttt{CLI} для подстановки значений по \texttt{YAML}.
+  Стек: \texttt{Bubble Tea}, \texttt{Lip Gloss}, \texttt{Cobra}.
 
   {\let\makelabel\descriptionlabel
     \renewcommand*\descriptionlabel[1]{\hspace\labelsep\normalfont #1}
