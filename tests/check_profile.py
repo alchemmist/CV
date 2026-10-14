@@ -45,7 +45,7 @@ def check_profiles():
         root = Path(directory)
         shutil.copy(ROOT / "tex" / "resume.cls", root)
         with compile_document(
-            root, "hr", (ROOT / "examples" / "hr.tex").read_text()
+            root, "hr", (ROOT / "example.tex").read_text()
         ) as document:
             text = "".join(page.get_text() for page in document)
             assert "Анна Петрова" in text

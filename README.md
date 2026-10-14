@@ -15,9 +15,10 @@ in `tex/*.tex`; formatting and photo placement belong to the class.
 
 ### Start your own resume
 
-Copy `examples/hr.tex` to `tex/my-resume.tex`, replace the sample data, and run
-`make build`. The result is `pdf/my-resume.pdf`. The example needs no personal
-assets and works without a photo or footer.
+Edit `example.tex` in the repository root and run `make example`. The result is
+`pdf/example.pdf`. The example needs no personal assets and works without a
+photo or footer. To keep several resumes, copy it to `tex/my-resume.tex`;
+`make build` builds every resume in `tex/`.
 
 Keep personal data in one preamble block:
 
