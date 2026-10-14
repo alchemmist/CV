@@ -50,5 +50,50 @@ def check_profiles():
         print("Profiles: Russian HR example, English profile, optional contacts and custom footer passed")
 
 
+
+def check_options():
+    with tempfile.TemporaryDirectory(prefix="resume-options-") as directory:
+        root = Path(directory)
+        shutil.copy(ROOT / "tex" / "resume.cls", root)
+        image = fitz.Pixmap(fitz.csRGB, fitz.IRect(0, 0, 120, 160), False)
+        image.set_rect(image.irect, (100, 150, 200))
+        image.save(root / "portrait.png")
+        positions = []
+        for density, color, size, width in [
+            ("compact", "accent=forest", "small", 20),
+            ("normal", "accent-html=6C1A36", "standard", 25.5),
+            ("spacious", "accent=charcoal", "none", None),
+        ]:
+            source = r"""\documentclass[margin,line]{resume}
+\resumesetup{name={Alex Example},location={London},
+contacts={\contact{first@example.com}{}\contact{Second}{}\contact{Third}{}\contact{Fourth}{}},
+OPTIONS,photo={portrait.png}}
+\begin{document}\begin{resume}
+\section{Experience}First paragraph.
+
+Second paragraph.
+\begin{itemize}\item First achievement.\item Second achievement.\end{itemize}
+\section{Education}Final marker.
+\end{resume}\end{document}
+""".replace("OPTIONS", f"density={density},{color},photo-size={size}")
+            with compile_document(root, density, source) as document:
+                assert len(document) == 1
+                page = document[0]
+                positions.append(page.search_for("Final marker")[0].y0 - page.search_for("First paragraph")[0].y0)
+                images = page.get_image_info()
+                if width is None:
+                    assert not images
+                else:
+                    assert len(images) == 1
+                    assert page.search_for("First paragraph")[0].y0 > images[0]["bbox"][3]
+                    assert abs(fitz.Rect(images[0]["bbox"]).width - width * 72 / 25.4) < 0.05
+                stripe = next(d for d in page.get_drawings() if d["rect"].height > 700)
+                expected = {"compact": (47, 79, 79), "normal": (108, 26, 54), "spacious": (51, 51, 51)}[density]
+                assert all(abs(a - b / 255) < 0.001 for a, b in zip(stripe["fill"], expected))
+        assert positions[0] < positions[1] < positions[2], positions
+        print("Options: accent colors, photo presets and increasing density spacing passed")
+
+
 if __name__ == "__main__":
     check_profiles()
+    check_options()

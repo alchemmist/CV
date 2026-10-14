@@ -859,8 +859,12 @@
 
 \usepackage{graphicx,wrapfig}
 \newcommand{\resumeheading}[1]{{\vspace*{-13mm}\sc\large #1}\\}
+\def\resume@photowidth{25.5mm}
+\newif\ifresume@showphoto
+\resume@showphototrue
 \newcommand{\photo}[2][25.5mm]{\def\resume@photowidth{#1}\def\resume@photo{#2}}
 \let\resume@photo\@empty
+\newif\ifresume@autocontacts
 \newsavebox{\resume@contactbox}
 \newsavebox{\resume@photobox}
 \newlength{\contactinfosep}
@@ -872,14 +876,23 @@
 }{%
     \end{minipage}%
   \end{lrbox}%
+  \ifresume@showphoto\ifx\resume@photo\@empty\else
+    \sbox{\resume@photobox}{\includegraphics[width=\resume@photowidth]{\resume@photo}}%
+  \fi\fi
   \noindent\hb@xt@\linewidth{%
     \rlap{\usebox{\resume@contactbox}}%
     \hss
-    \ifx\resume@photo\@empty\else
-      \sbox{\resume@photobox}{\includegraphics[width=\resume@photowidth]{\resume@photo}}%
+    \ifresume@showphoto\ifx\resume@photo\@empty\else
       \raisebox{\dimexpr\ht\resume@contactbox-\ht\resume@photobox\relax}[0pt][0pt]{\usebox{\resume@photobox}}%
-    \fi
+    \fi\fi
   }\par
+  \ifresume@autocontacts
+    \ifresume@showphoto\ifx\resume@photo\@empty\else
+      \ifdim\dimexpr\ht\resume@photobox-\ht\resume@contactbox-\dp\resume@contactbox\relax>0pt
+        \vspace{\dimexpr\ht\resume@photobox-\ht\resume@contactbox-\dp\resume@contactbox\relax}%
+      \fi
+    \fi\fi
+  \fi
   \vspace{\contactinfosep}%
 }
 \NewDocumentCommand{\resumeicon}{O{1em} m}{\raisebox{\dimexpr0.5ex-0.5\height\relax}{\includegraphics[height=#1]{#2}}}
@@ -952,6 +965,26 @@ citecolor=blue, urlcolor=blue]{hyperref}
 \tl_new:N \g_resume_contact_title_tl
 \tl_gset:Nn \g_resume_contact_title_tl { Personal\\Information }
 \tl_new:N \g_resume_contacts_tl
+\tl_new:N \g_resume_density_tl
+\tl_gset:Nn \g_resume_density_tl {normal}
+\AtBeginDocument
+  {
+    \str_case:Vn \g_resume_density_tl
+      {
+        {compact}
+          {
+            \setlength{\parskip}{0.6\baselineskip}
+            \setlength{\sectionskip}{2.8ex~plus~0.8ex~minus~0.2ex}
+            \setlist{itemsep=0pt,parsep=1pt,topsep=2pt,partopsep=0pt}
+          }
+        {spacious}
+          {
+            \setlength{\parskip}{\baselineskip}
+            \setlength{\sectionskip}{4.2ex~plus~1ex~minus~0.2ex}
+            \setlist{itemsep=3pt,parsep=2pt,topsep=5pt,partopsep=2pt}
+          }
+      }
+  }
 \bool_new:N \l_resume_contact_first_bool
 \keys_define:nn { resume }
   {
@@ -960,7 +993,33 @@ citecolor=blue, urlcolor=blue]{hyperref}
     location .tl_gset:N = \g_resume_location_tl,
     contact-title .tl_gset:N = \g_resume_contact_title_tl,
     contacts .tl_gset:N = \g_resume_contacts_tl,
-    photo .code:n = { \photo{#1} },
+    photo .code:n = { \gdef\resume@photo{#1} },
+    photo-width .code:n =
+      {
+        \dim_compare:nNnTF {#1} > {0pt}
+          { \gdef\resume@photowidth{#1} }
+          { \ClassError{resume}{Photo~width~must~be~positive}{Choose~a~width~such~as~25.5mm.} }
+      },
+    photo-size .choice:,
+    photo-size / none .code:n = { \resume@showphotofalse },
+    photo-size / small .code:n = { \resume@showphototrue \gdef\resume@photowidth{20mm} },
+    photo-size / standard .code:n = { \resume@showphototrue \gdef\resume@photowidth{25.5mm} },
+    accent .choice:,
+    accent / navy .code:n = { \definecolor{sidebarcolor}{HTML}{003153} },
+    accent / forest .code:n = { \definecolor{sidebarcolor}{HTML}{2F4F4F} },
+    accent / plum .code:n = { \definecolor{sidebarcolor}{HTML}{6C1A36} },
+    accent / charcoal .code:n = { \definecolor{sidebarcolor}{HTML}{333333} },
+    accent / red .code:n = { \definecolor{sidebarcolor}{HTML}{FC3E1C} },
+    accent-html .code:n =
+      {
+        \regex_match:nnTF { \A [0-9a-fA-F]{6} \Z } {#1}
+          { \definecolor{sidebarcolor}{HTML}{#1} }
+          { \ClassError{resume}{Invalid~accent~color}{Use~six~hex~digits,~without~a~hash.} }
+      },
+    density .choice:,
+    density / normal .code:n = { \tl_gset:Nn \g_resume_density_tl {normal} },
+    density / compact .code:n = { \tl_gset:Nn \g_resume_density_tl {compact} },
+    density / spacious .code:n = { \tl_gset:Nn \g_resume_density_tl {spacious} },
     footer-left .code:n = { \gdef\resume@footerleft{#1} },
     footer-right .code:n = { \gdef\resume@footerright{#1} },
     language .choice:,
@@ -1013,6 +1072,7 @@ citecolor=blue, urlcolor=blue]{hyperref}
       { \tl_if_empty_p:N \g_resume_location_tl }
       { \tl_if_empty_p:N \g_resume_contacts_tl }
       {
+        \resume@autocontactstrue
         \begin{contactinfo}
           \tl_if_empty:NF \g_resume_contact_title_tl
             { \section{\mysidestyle\tl_use:N \g_resume_contact_title_tl} }
@@ -1021,6 +1081,7 @@ citecolor=blue, urlcolor=blue]{hyperref}
             { \resume_contact_separator:\tl_use:N \g_resume_location_tl }
           \tl_use:N \g_resume_contacts_tl
         \end{contactinfo}
+        \resume@autocontactsfalse
         \par
       }
   }

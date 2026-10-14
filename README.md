@@ -55,11 +55,39 @@ Set `photo={../images/avatar.png}` in `\resumesetup` or declare
 `\photo{../images/avatar.png}`. The default width is 25.5 mm, preserving aspect
 ratio. `\photo[35mm]{...}` changes the width; `\photo{}` removes the photo.
 The right upper corner aligns with the right text margin and top of the contact
-block. Paths are relative to `tex/`; PDF, PNG and JPEG are supported.
+block. Automatic profiles reserve enough height for the photo, even with a short
+contact list. Paths are relative to `tex/`; PDF, PNG and JPEG are supported.
 
 The lower-level `\resumeheading{...}` and `contactinfo` environment remain
 available for custom headers. Do not combine a manual heading/contact block
 with the corresponding automatic profile fields.
+
+### Accent, density and photo presets
+
+Add these keys to `\resumesetup`:
+
+```tex
+\resumesetup{
+  accent=forest,
+  density=normal,
+  photo={../images/avatar.png},
+  photo-size=standard
+}
+```
+
+| Key | Values | Default |
+| --- | --- | --- |
+| `accent` | `navy`, `forest`, `plum`, `charcoal`, `red` | `navy` |
+| `accent-html` | Six hex digits, for example `6C1A36` | Not set |
+| `density` | `compact`, `normal`, `spacious` | `normal` |
+| `photo-size` | `none`, `small` (20 mm), `standard` (25.5 mm) | `standard` |
+| `photo-width` | Positive LaTeX length, for example `30mm` | 25.5 mm |
+
+Density adjusts paragraph, section and list spacing together, keeping font sizes
+and page geometry unchanged. `normal` preserves the original layout. Accent
+changes the sidebar; links keep their familiar readable blue. The last color
+setting wins. Set `photo-width` after `photo-size` for a custom width.
+`photo-size=none` hides the photo without discarding its path.
 
 ### Yandex internship resume
 
