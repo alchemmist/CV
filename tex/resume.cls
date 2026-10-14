@@ -491,8 +491,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % all of the resume goes in the resume environment
 %
-\newenvironment{resume}{\begingroup
+\newenvironment{resume}{\resume@profileheading\begingroup
   \@ifundefined{@opening}{\opening}{}
+  \resume@profilecontacts
 }{\endgroup}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -782,18 +783,10 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\lfoot{
-  \begingroup
-  \hypersetup{urlcolor=gray!40}
-  \href{https://t.me/alchemmist/}{\texttt{@alchemmist}}
-  \endgroup
-}
-\rfoot{
-  \begingroup
-  \hypersetup{urlcolor=gray!40}
-  \href{https://github.com/alchemmist/CV}{Open~Source\,\faGithub}
-  \endgroup
-}
+\let\resume@footerleft\@empty
+\let\resume@footerright\@empty
+\lfoot{\begingroup\hypersetup{urlcolor=gray!40} \resume@footerleft\space\endgroup}
+\rfoot{\begingroup\hypersetup{urlcolor=gray!40} \resume@footerright\space\endgroup}
 
 \newenvironment{list1}{
   \begin{list}{\ding{113}}{%
@@ -816,6 +809,7 @@
 \newcommand{\mysubheadingstyle}{\sl}
 
 \RequirePackage{xcolor}
+\definecolor{sidebarcolor}{RGB}{0,49,83}
 \RequirePackage{eso-pic}
 
 % Цвет и ширина боковой полосы
@@ -888,7 +882,7 @@
   }\par
   \vspace{\contactinfosep}%
 }
-\newcommand{\faAlcehmmist}{\raisebox{\dimexpr0.5ex-0.5\height\relax}{\includegraphics[height=1em]{../images/blog-logo.pdf}}}
+\NewDocumentCommand{\resumeicon}{O{1em} m}{\raisebox{\dimexpr0.5ex-0.5\height\relax}{\includegraphics[height=#1]{#2}}}
 \ExplSyntaxOn
 \clist_new:N \g_resume_sidebar_logos_clist
 \box_new:N \l_resume_sidebar_logo_box
@@ -949,3 +943,85 @@ citecolor=blue, urlcolor=blue]{hyperref}
   urlcolor=linkcolor,          % цвет внешних ссылок (сайты)
   citecolor=green        % цвет ссылок на библиографию
 }
+
+\RequirePackage{fontawesome}
+\ExplSyntaxOn
+\tl_new:N \g_resume_name_tl
+\tl_new:N \g_resume_title_tl
+\tl_new:N \g_resume_location_tl
+\tl_new:N \g_resume_contact_title_tl
+\tl_gset:Nn \g_resume_contact_title_tl { Personal\\Information }
+\tl_new:N \g_resume_contacts_tl
+\bool_new:N \l_resume_contact_first_bool
+\keys_define:nn { resume }
+  {
+    name .tl_gset:N = \g_resume_name_tl,
+    title .tl_gset:N = \g_resume_title_tl,
+    location .tl_gset:N = \g_resume_location_tl,
+    contact-title .tl_gset:N = \g_resume_contact_title_tl,
+    contacts .tl_gset:N = \g_resume_contacts_tl,
+    photo .code:n = { \photo{#1} },
+    footer-left .code:n = { \gdef\resume@footerleft{#1} },
+    footer-right .code:n = { \gdef\resume@footerright{#1} },
+    language .choice:,
+    language / english .code:n = { \resume_language:n {english} },
+    language / russian .code:n = { \resume_language:n {russian} },
+  }
+\cs_new_protected:Npn \resume_language:n #1
+  {
+    \@ifpackageloaded{fontenc}{}{\RequirePackage[T2A,T1]{fontenc}}
+    \@ifpackageloaded{babel}{}{\RequirePackage[english,russian]{babel}}
+    \AtBeginDocument{\selectlanguage{#1}}
+    \str_if_eq:nnTF {#1} {russian}
+      { \tl_gset:Nn \g_resume_contact_title_tl { Персональная\\Информация } }
+      { \tl_gset:Nn \g_resume_contact_title_tl { Personal\\Information } }
+  }
+\NewDocumentCommand \resumesetup { m } { \keys_set:nn { resume } {#1} }
+\NewDocumentCommand \resumecontacts { m } { \tl_gset:Nn \g_resume_contacts_tl {#1} }
+\cs_new_protected:Npn \resume_contact_separator:
+  {
+    \bool_if:NTF \l_resume_contact_first_bool
+      { \bool_set_false:N \l_resume_contact_first_bool }
+      { \\ }
+  }
+\NewDocumentCommand \contact { O{} m m }
+  {
+    \tl_if_blank:nF {#2}
+      {
+        \resume_contact_separator:
+        \tl_if_blank:nF {#1} { #1\space }
+        \tl_if_blank:nTF {#3}
+          { \texttt{#2} }
+          { \href{#3}{\texttt{#2}} }
+      }
+    \ignorespaces
+  }
+\cs_new_protected:Npn \resume@profileheading
+  {
+    \tl_if_empty:NF \g_resume_name_tl
+      {
+        \resumeheading
+          {
+            \tl_use:N \g_resume_name_tl
+            \tl_if_empty:NF \g_resume_title_tl { ~---~\tl_use:N \g_resume_title_tl }
+          }
+      }
+  }
+\cs_new_protected:Npn \resume@profilecontacts
+  {
+    \bool_lazy_and:nnF
+      { \tl_if_empty_p:N \g_resume_location_tl }
+      { \tl_if_empty_p:N \g_resume_contacts_tl }
+      {
+        \begin{contactinfo}
+          \tl_if_empty:NF \g_resume_contact_title_tl
+            { \section{\mysidestyle\tl_use:N \g_resume_contact_title_tl} }
+          \bool_set_true:N \l_resume_contact_first_bool
+          \tl_if_empty:NF \g_resume_location_tl
+            { \resume_contact_separator:\tl_use:N \g_resume_location_tl }
+          \tl_use:N \g_resume_contacts_tl
+        \end{contactinfo}
+        \par
+      }
+  }
+\ExplSyntaxOff

@@ -13,68 +13,63 @@ This is my Curriculum Vita (CV) as a software engineer. I have two versions of C
 The [`resume.cls`](tex/resume.cls) class defines the layout. Resume content lives
 in `tex/*.tex`; formatting and photo placement belong to the class.
 
-### Heading, contacts and photo
+### Start your own resume
 
-Declare the photo in the preamble and put contact information in `contactinfo`:
+Copy `examples/hr.tex` to `tex/my-resume.tex`, replace the sample data, and run
+`make build`. The result is `pdf/my-resume.pdf`. The example needs no personal
+assets and works without a photo or footer.
+
+Keep personal data in one preamble block:
 
 ```tex
 \documentclass[margin,line]{resume}
-\definecolor{sidebarcolor}{RGB}{0,49,83}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[english]{babel}
-\usepackage{fontawesome}
-
-\photo{../images/avatar.png}
-
+\resumesetup{
+  language=english,
+  name={Your Name},
+  title={HR Partner},
+  location={City, Country},
+  contacts={
+    \contact[\faEnvelope]{you@example.com}{mailto:you@example.com}
+    \contact{Portfolio}{https://example.com}
+  },
+  footer-left={},
+  footer-right={}
+}
 \begin{document}
-\resumeheading{Your Name --- Backend Developer}
 \begin{resume}
-  \begin{contactinfo}
-    \section{\mysidestyle Personal\\Information}
-    City, Country \\
-    \href{mailto:you@example.com}{you@example.com}
-  \end{contactinfo}
-
   \section{\mysidestyle Experience}
   Your experience.
 \end{resume}
 \end{document}
 ```
 
-The photo's top aligns with the top of the contact block, below the heading
-and horizontal rule. Its right edge aligns with the body's right margin.
-The default width is 25.5 mm; the aspect ratio is preserved. To change the size,
-use `\photo[35mm]{../images/avatar.png}`. Larger photos extend left and down
-from the same corner without moving the text. Keep enough free space for the
-chosen size; the class does not wrap text around the photo.
+`language` accepts `english` or `russian` and sets the default contact heading.
+Set `contact-title` after `language` to override it, or use `{}` to hide it.
+Name, title, location, contacts, photo and footers are optional. A contact has
+an optional icon, a display label, and a URL; an empty URL produces plain text,
+and an empty label omits the contact. Put braces around values containing commas.
+`\resumecontacts{...}` replaces the contact list. Shared personal data for the
+included resumes lives in `tex/anton-profile.sty`, outside the reusable class.
 
-Paths are relative to the build directory (`tex/` here). PDF, PNG and JPEG are
-supported. Omit `\photo` or use `\photo{}` for no photo. Calling it again replaces
-the declaration. The photo is drawn only where `contactinfo` is used, so it does
-not repeat on subsequent pages.
+Set `photo={../images/avatar.png}` in `\resumesetup` or declare
+`\photo{../images/avatar.png}`. The default width is 25.5 mm, preserving aspect
+ratio. `\photo[35mm]{...}` changes the width; `\photo{}` removes the photo.
+The right upper corner aligns with the right text margin and top of the contact
+block. Paths are relative to `tex/`; PDF, PNG and JPEG are supported.
 
-To migrate an existing document, replace the contact `minipage`, the photo's
-`minipage`/`textblock`, and their trailing negative `\vspace` with `contactinfo`.
-Replace the manually shifted heading with `\resumeheading{...}`. The template's
-existing contact-to-body spacing is preserved; `\contactinfosep` controls that
-spacing centrally. Its default preserves the body baseline after removing the
-empty photo paragraph. For a more compact document, for example, declare
-`\addtolength{\contactinfosep}{-1mm}` in the preamble.
+The lower-level `\resumeheading{...}` and `contactinfo` environment remain
+available for custom headers. Do not combine a manual heading/contact block
+with the corresponding automatic profile fields.
 
 ### Yandex internship resume
 
 [Short Russian resume focused on my Yandex internship](pdf/short-yandex.pdf) · [LaTeX source](tex/short-yandex.tex). Uses the short resume layout with a `#fc3e1c` accent stripe.
 
-### Blog icon
+### Custom contact icons
 
-Use `\faAlcehmmist` for the blog logo, sized to the current text and vertically
-centered with lowercase text:
-
-```tex
-\faAlcehmmist\space
-\href{https://alchemmist.xyz}{\texttt{alchemmist.xyz}}
-```
+Use `\resumeicon{../images/blog-logo.pdf}` for an image icon aligned with the
+text. An optional height, for example `\resumeicon[1.2em]{logo.png}`, controls
+its size. The class contains no personal logo or links.
 
 ### Sidebar logos
 
@@ -114,7 +109,7 @@ the packages used by this template:
 
 ```sh
 tlmgr install latexmk babel-english babel-russian hyphen-russian cyrillic lh cm-super fontawesome \
-  tcolorbox listings tikzfill textpos enumitem wrapfig fancyhdr eso-pic
+  tcolorbox listings tikzfill textpos enumitem wrapfig fancyhdr eso-pic grfext
 ```
 
 A user-local TinyTeX installation can live in `~/Library/TinyTeX`, with command

@@ -17,6 +17,7 @@ add-built-files:
 	git add pdf/
 
 test:
+	$(PYTHON) tests/check_profile.py
 	$(PYTHON) tests/check_layout.py $(if $(BASELINE),--baseline "$(BASELINE)")
 
 precommit: build add-built-files
