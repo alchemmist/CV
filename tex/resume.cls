@@ -864,6 +864,30 @@
 \usepackage{enumitem}
 
 \usepackage{graphicx,wrapfig}
+\newcommand{\resumeheading}[1]{{\vspace*{-13mm}\sc\large #1}\\}
+\newcommand{\photo}[2][25.5mm]{\def\resume@photowidth{#1}\def\resume@photo{#2}}
+\let\resume@photo\@empty
+\newsavebox{\resume@contactbox}
+\newsavebox{\resume@photobox}
+\newlength{\contactinfosep}
+\setlength{\contactinfosep}{-2.01537pt}
+\newenvironment{contactinfo}{%
+  \par\noindent
+  \begin{lrbox}{\resume@contactbox}%
+    \begin{minipage}[t]{0.55\linewidth}%
+}{%
+    \end{minipage}%
+  \end{lrbox}%
+  \noindent\hb@xt@\linewidth{%
+    \rlap{\usebox{\resume@contactbox}}%
+    \hss
+    \ifx\resume@photo\@empty\else
+      \sbox{\resume@photobox}{\includegraphics[width=\resume@photowidth]{\resume@photo}}%
+      \raisebox{\dimexpr\ht\resume@contactbox-\ht\resume@photobox\relax}[0pt][0pt]{\usebox{\resume@photobox}}%
+    \fi
+  }\par
+  \vspace{\contactinfosep}%
+}
 \newcommand{\faAlcehmmist}{\raisebox{\dimexpr0.5ex-0.5\height\relax}{\includegraphics[height=1em]{../images/blog-logo.pdf}}}
 \ExplSyntaxOn
 \clist_new:N \g_resume_sidebar_logos_clist
@@ -904,8 +928,6 @@
 \usepackage[unicode, colorlinks=true, pdfstartview=FitV, linkcolor=blue,
 citecolor=blue, urlcolor=blue]{hyperref}
 \pdfcompresslevel=9
-\usepackage{xcolor}
-\usepackage{eso-pic}
 
 \usepackage{calc} % для вычислений ширины
 

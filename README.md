@@ -10,29 +10,57 @@
 
 This is my Curriculum Vita (CV) as a software engineer. I have two versions of CV ([english](/pdf/english.pdf) and [russian](/pdf/russian.pdf)) already rednered in [`pdf`](/pdf) directory. This repo have MIT license, so you can use it as a template for your CV or or whatever you want.
 
-The `resome.cls` file it's a class of docuement (like _article_ or _book_ etc.) where define base document structure and visual view. I need to set it in a begining of CV tex file. This is a base header:
+The [`resume.cls`](tex/resume.cls) class defines the layout. Resume content lives
+in `tex/*.tex`; formatting and photo placement belong to the class.
+
+### Heading, contacts and photo
+
+Declare the photo in the preamble and put contact information in `contactinfo`:
 
 ```tex
 \documentclass[margin,line]{resume}
-
+\definecolor{sidebarcolor}{RGB}{0,49,83}
 \usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel}
 \usepackage[T1]{fontenc}
+\usepackage[english]{babel}
 \usepackage{fontawesome}
 
-\usepackage[absolute]{textpos}
-\usepackage{enumitem}
-
-\usepackage{graphicx,wrapfig}
-\usepackage{url}
-\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue,
-citecolor=blue, urlcolor=blue]{hyperref}
-\pdfcompresslevel=9
+\photo{../images/avatar.png}
 
 \begin{document}
-...
+\resumeheading{Your Name --- Backend Developer}
+\begin{resume}
+  \begin{contactinfo}
+    \section{\mysidestyle Personal\\Information}
+    City, Country \\
+    \href{mailto:you@example.com}{you@example.com}
+  \end{contactinfo}
+
+  \section{\mysidestyle Experience}
+  Your experience.
+\end{resume}
 \end{document}
 ```
+
+The photo's top aligns with the top of the contact block, below the heading
+and horizontal rule. Its right edge aligns with the body's right margin.
+The default width is 25.5 mm; the aspect ratio is preserved. To change the size,
+use `\photo[35mm]{../images/avatar.png}`. Larger photos extend left and down
+from the same corner without moving the text. Keep enough free space for the
+chosen size; the class does not wrap text around the photo.
+
+Paths are relative to the build directory (`tex/` here). PDF, PNG and JPEG are
+supported. Omit `\photo` or use `\photo{}` for no photo. Calling it again replaces
+the declaration. The photo is drawn only where `contactinfo` is used, so it does
+not repeat on subsequent pages.
+
+To migrate an existing document, replace the contact `minipage`, the photo's
+`minipage`/`textblock`, and their trailing negative `\vspace` with `contactinfo`.
+Replace the manually shifted heading with `\resumeheading{...}`. The template's
+existing contact-to-body spacing is preserved; `\contactinfosep` controls that
+spacing centrally. Its default preserves the body baseline after removing the
+empty photo paragraph. For a more compact document, for example, declare
+`\addtolength{\contactinfosep}{-1mm}` in the preamble.
 
 ### Yandex internship resume
 
@@ -74,14 +102,48 @@ without its circular background; its vector source is `images/yandex-mark.svg`.
 
 ### Building
 
-You can build it with make:
+Build every `tex/*.tex` file into `pdf/` with:
 
 ```sh
-brew install texlive
 make build
 ```
 
-After that in `pdf` directory wil be build a pdf version of all `.tex` files in repo.
+On macOS, install [TinyTeX](https://yihui.org/tinytex/) or MacTeX and make sure
+`pdflatex` and `latexmk` are on `PATH`. For a minimal TinyTeX installation, add
+the packages used by this template:
+
+```sh
+tlmgr install latexmk babel-english babel-russian hyphen-russian cyrillic lh cm-super fontawesome \
+  tcolorbox listings tikzfill textpos enumitem wrapfig fancyhdr eso-pic
+```
+
+A user-local TinyTeX installation can live in `~/Library/TinyTeX`, with command
+symlinks in `~/.local/bin`. The build runs natively on macOS; Docker is not
+required. `babel-russian` and `hyphen-russian` are separate packages: the latter
+provides Russian hyphenation patterns. `make build` fails if LaTeX reports
+missing patterns.
+
+### Layout checks
+
+`make test` requires `latexmk`, the LaTeX packages used by `make build`, and
+PyMuPDF (`python3 -m pip install pymupdf`). It compiles fixtures with portrait
+and landscape images, different sizes and page geometry, replaced and omitted
+photos, and a second page. It checks alignment, aspect ratios and unchanged
+text positions. It also checks the right text margin in `pdf/short-yandex.pdf`;
+run `make build` first to check the current sources.
+
+To compare all resumes against PDFs built before a layout change, keep a copy
+of that `pdf/` directory, run `make build`, then run:
+
+```sh
+make test BASELINE=/absolute/path/to/baseline-pdf
+```
+
+The baseline and current PDFs must be built with the same TeX distribution and
+fonts. The comparison checks text coordinates, page breaks, and rendered pixels
+at 144 dpi outside the old and new photo rectangles. Raster comparison allows
+a difference of at most 2/255 per color channel for renderer rounding; text
+positions are checked separately.
 
 ### Questions | Contribute
 

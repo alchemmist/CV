@@ -8,11 +8,13 @@
 \usepackage[T1]{fontenc}
 \usepackage{fontawesome}
 
+\photo{../images/avatar.png}
+
 \begin{document}
 
-{\vspace*{-13mm}\sc \large Гришин Антон --- backend-разработчик, грейд 15} \\
+\resumeheading{Гришин Антон --- backend-разработчик, грейд 15}
 \begin{resume}
-  \begin{minipage}[t]{0.55\textwidth}
+  \begin{contactinfo}
     \section{\mysidestyle Персональная\\Информация}
     Москва, Россия \\
     \faAlcehmmist\space
@@ -27,15 +29,8 @@
     \href{tel:+79150672638}{\color{linkcolor}\texttt{+7(915)067-2638}}  \\
     \faEnvelope \space
     \href{mailto:anton.ingrish@gmail.com}{\color{linkcolor}\texttt{anton.ingrish@gmail.com}}
-  \end{minipage}
+  \end{contactinfo}
 
-  \begin{minipage}[H]{0.18\textwidth}
-    \begin{textblock}{7}(10.87, 1.38)
-      \includegraphics[width=0.270\textwidth]{../images/avatar.png}
-    \end{textblock}
-  \end{minipage}
-
-  \vspace{-7mm}
   \section{\mysidestyle Обо мне}
   \texttt{Backend}-разработчик и стажёр Яндекса. Развиваю инфраструктуру
   потоковой обработки данных: деплой, \texttt{CI/CD}, динамическую конфигурацию

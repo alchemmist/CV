@@ -7,17 +7,18 @@
 \usepackage[T1]{fontenc}
 \usepackage{fontawesome}
 
-% TODO: сделать автовыраваниване для фотки
 
 \newcommand{\githubrepos}{73}
 \newcommand{\githubcommits}{1597}
 \newcommand{\githublines}{297996}
 
+\photo{../images/avatar.png}
+
 \begin{document}
 
-{\vspace*{-13mm}\sc \large Гришин Антон} \\
+\resumeheading{Гришин Антон}
 \begin{resume}
-  \begin{minipage}[t]{0.55\textwidth}
+  \begin{contactinfo}
     \section{\mysidestyle Персональная\\Информация}
     Москва, Россия \\
     \faAlcehmmist\space
@@ -32,15 +33,8 @@
     \href{tel:+79150672638}{\color{linkcolor}\texttt{+7(915)067-2638}}  \\
     \faEnvelope \space
     \href{mailto:anton.ingrish@gmail.com}{\color{linkcolor}\texttt{anton.ingrish@gmail.com}}
-  \end{minipage}
+  \end{contactinfo}
 
-  \begin{minipage}[H]{0.18\textwidth}
-    \begin{textblock}{7}(10.87, 1.38)
-      \includegraphics[width=0.270\textwidth]{../images/avatar.png}
-    \end{textblock}
-  \end{minipage}
-
-  \vspace{-7mm}
   \section{\mysidestyle Обо мне}
   Я студент и разработчик: участвовал в разработке \githubrepos\ репозиториев, отправил \githubcommits\  
   коммитов и написал \githublines\ строчек кода.
