@@ -204,7 +204,11 @@ def check_photos():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--baseline", type=Path)
+    parser.add_argument("--pdf", type=Path)
     args = parser.parse_args()
+    if args.pdf:
+        check_right_margin(args.pdf)
+        raise SystemExit(0)
     check_right_margin(ROOT / "pdf" / "short-yandex.pdf")
     check_photos()
     if args.baseline:

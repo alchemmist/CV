@@ -765,7 +765,13 @@
   \body\\
 \end{format}
 
-\let\section\@@section
+\let\resume@section\@@section
+\renewcommand{\section}[1]{%
+  \ifx\\\@tabcr\else
+    \par\Needspace{3\baselineskip}%
+  \fi
+  \resume@section{#1}%
+}
 
 
 \pagestyle{empty}
@@ -858,8 +864,17 @@
 \usepackage{enumitem}
 
 \usepackage{graphicx,wrapfig}
-\newcommand{\resumeheading}[1]{{\vspace*{-13mm}\sc\large #1}\\}
+\newsavebox{\resume@headingbox}
+\newcommand{\resumeheading}[1]{%
+  \sbox{\resume@headingbox}{\sc\large #1}%
+  \ifdim\wd\resume@headingbox>\dimexpr\textwidth+\hoffset\relax
+    {\vspace*{-13mm}\parbox[t]{\dimexpr\textwidth+\hoffset\relax}{\sc\large\raggedright #1}}\\
+  \else
+    {\vspace*{-13mm}\sc\large #1}\\
+  \fi
+}
 \def\resume@photowidth{25.5mm}
+\newif\ifresume@profilephoto
 \newif\ifresume@showphoto
 \resume@showphototrue
 \newcommand{\photo}[2][25.5mm]{\def\resume@photowidth{#1}\def\resume@photo{#2}}
@@ -869,10 +884,24 @@
 \newsavebox{\resume@photobox}
 \newlength{\contactinfosep}
 \setlength{\contactinfosep}{-2.01537pt}
+\newlength{\resume@contactwidth}
 \newenvironment{contactinfo}{%
   \par\noindent
+  \setlength{\resume@contactwidth}{0.55\linewidth}%
+  \ifresume@autocontacts
+    \setlength{\resume@contactwidth}{\linewidth}%
+    \ifresume@showphoto\ifx\resume@photo\@empty\else
+      \setlength{\resume@contactwidth}{\dimexpr\linewidth-\resume@photowidth-5mm\relax}%
+      \ifdim\resume@contactwidth<30mm
+        \ClassError{resume}{Photo leaves too little space for contacts}{Reduce photo-width to leave at least 30mm for contacts and a 5mm gap.}%
+      \fi
+      \ifdim\resume@contactwidth>0.55\linewidth
+        \setlength{\resume@contactwidth}{0.55\linewidth}%
+      \fi
+    \fi\fi
+  \fi
   \begin{lrbox}{\resume@contactbox}%
-    \begin{minipage}[t]{0.55\linewidth}%
+    \begin{minipage}[t]{\resume@contactwidth}%
 }{%
     \end{minipage}%
   \end{lrbox}%
@@ -931,7 +960,8 @@
   }
 \AddToShipoutPictureFG{\AtPageLowerLeft{\resume_sidebar_logos_draw:}}
 \ExplSyntaxOff
-\usepackage{url}
+\RequirePackage{xurl}
+\RequirePackage{needspace}
 \usepackage[unicode, colorlinks=true, pdfstartview=FitV, linkcolor=blue,
 citecolor=blue, urlcolor=blue]{hyperref}
 \pdfcompresslevel=9
@@ -993,7 +1023,7 @@ citecolor=blue, urlcolor=blue]{hyperref}
     location .tl_gset:N = \g_resume_location_tl,
     contact-title .tl_gset:N = \g_resume_contact_title_tl,
     contacts .tl_gset:N = \g_resume_contacts_tl,
-    photo .code:n = { \gdef\resume@photo{#1} },
+    photo .code:n = { \gdef\resume@photo{#1} \resume@profilephototrue },
     photo-width .code:n =
       {
         \dim_compare:nNnTF {#1} > {0pt}
@@ -1043,46 +1073,102 @@ citecolor=blue, urlcolor=blue]{hyperref}
       { \bool_set_false:N \l_resume_contact_first_bool }
       { \\ }
   }
+\box_new:N \l_resume_contact_label_box
+\box_new:N \l_resume_contact_icon_box
 \NewDocumentCommand \contact { O{} m m }
   {
     \tl_if_blank:nF {#2}
       {
         \resume_contact_separator:
-        \tl_if_blank:nF {#1} { #1\space }
+        \hbox_set:Nn \l_resume_contact_icon_box { \tl_if_blank:nF {#1} { #1\space } }
+        \hbox_set:Nn \l_resume_contact_label_box { \texttt{#2} }
+        \dim_compare:nNnTF
+          { \box_wd:N\l_resume_contact_icon_box + \box_wd:N\l_resume_contact_label_box }
+          > { \linewidth }
+          { \cs_set:Npn \resume_contact_label: { \nolinkurl{#2} } }
+          { \cs_set:Npn \resume_contact_label: { \texttt{#2} } }
+        \box_use:N \l_resume_contact_icon_box
         \tl_if_blank:nTF {#3}
-          { \texttt{#2} }
-          { \href{#3}{\texttt{#2}} }
+          { \resume_contact_label: }
+          { \href{#3}{\resume_contact_label:} }
       }
     \ignorespaces
   }
 \cs_new_protected:Npn \resume@profileheading
   {
-    \tl_if_empty:NF \g_resume_name_tl
+    \bool_lazy_and:nnF
+      { \tl_if_blank_p:V \g_resume_name_tl }
+      { \tl_if_blank_p:V \g_resume_title_tl }
       {
         \resumeheading
           {
             \tl_use:N \g_resume_name_tl
-            \tl_if_empty:NF \g_resume_title_tl { ~---~\tl_use:N \g_resume_title_tl }
+            \tl_if_blank:VF \g_resume_title_tl
+              {
+                \tl_if_blank:VF \g_resume_name_tl { ~---~ }
+                \tl_use:N \g_resume_title_tl
+              }
           }
       }
   }
+\bool_new:N \g_resume_has_contacts_bool
 \cs_new_protected:Npn \resume@profilecontacts
   {
-    \bool_lazy_and:nnF
-      { \tl_if_empty_p:N \g_resume_location_tl }
-      { \tl_if_empty_p:N \g_resume_contacts_tl }
+    \bool_gset_false:N \g_resume_has_contacts_bool
+    \tl_if_blank:VF \g_resume_location_tl
+      { \bool_gset_true:N \g_resume_has_contacts_bool }
+    \group_begin:
+      \RenewDocumentCommand \contact { O{} m m }
+        { \tl_if_blank:nF {##2} { \bool_gset_true:N \g_resume_has_contacts_bool } }
+      \tl_use:N \g_resume_contacts_tl
+    \group_end:
+    \bool_set_eq:NN \l_tmpa_bool \g_resume_has_contacts_bool
+    \ifresume@profilephoto\ifresume@showphoto
+      \ifx\resume@photo\@empty\else
+        \bool_set_true:N \l_tmpa_bool
+      \fi
+    \fi\fi
+    \bool_if:NT \l_tmpa_bool
       {
         \resume@autocontactstrue
         \begin{contactinfo}
-          \tl_if_empty:NF \g_resume_contact_title_tl
-            { \section{\mysidestyle\tl_use:N \g_resume_contact_title_tl} }
+          \bool_if:NT \g_resume_has_contacts_bool
+            {
+              \tl_if_empty:NF \g_resume_contact_title_tl
+                { \section{\mysidestyle\tl_use:N \g_resume_contact_title_tl} }
+            }
           \bool_set_true:N \l_resume_contact_first_bool
-          \tl_if_empty:NF \g_resume_location_tl
+          \tl_if_blank:VF \g_resume_location_tl
             { \resume_contact_separator:\tl_use:N \g_resume_location_tl }
           \tl_use:N \g_resume_contacts_tl
+          \bool_if:NF \g_resume_has_contacts_bool { \strut }
         \end{contactinfo}
         \resume@autocontactsfalse
         \par
       }
   }
+\box_new:N \l_resume_entry_box
+\NewDocumentEnvironment {resumeentry} {m m m}
+  {
+    \par
+    \vbox_set_top:Nn \l_resume_entry_box
+      {
+        \hsize=\linewidth
+        \parindent=0pt
+        \textbf{#1}
+        \tl_if_blank:nF {#2} { ,~#2 }
+        \tl_if_blank:nF {#3} { \hfill #3 }
+        \par
+      }
+    \Needspace{\dimexpr\box_ht:N\l_resume_entry_box+\box_dp:N\l_resume_entry_box+2\baselineskip\relax}
+    \group_begin:
+      \interlinepenalty=10000
+      \noindent\textbf{#1}
+      \tl_if_blank:nF {#2} { ,~#2 }
+      \tl_if_blank:nF {#3} { \hfill #3 }
+      \par\nobreak
+    \group_end:
+    \ignorespaces
+  }
+  { \par\addpenalty{\@secpenalty} }
 \ExplSyntaxOff

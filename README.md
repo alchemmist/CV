@@ -89,6 +89,44 @@ changes the sidebar; links keep their familiar readable blue. The last color
 setting wins. Set `photo-width` after `photo-size` for a custom width.
 `photo-size=none` hides the photo without discarding its path.
 
+### Long content and page breaks
+
+Long names and professional titles wrap within the header width. Contacts wrap
+when their label does not fit; photo width reserves a separate contact column
+with a 5 mm gap. A photo that leaves less than 30 mm for contacts produces an
+explicit error. A photo declared with the `photo` key also works without contacts;
+an entirely empty contact list leaves no heading or blank block.
+
+Section headings reserve room for the first lines of their content. Use
+`resumeentry` to keep a role heading with the start of its description while
+allowing a long description to continue on another page:
+
+```tex
+\section{\mysidestyle Experience}
+\begin{resumeentry}{HR Partner}{Example Company}{2023--2026}
+  Developed an onboarding program.
+  \begin{itemize}
+    \item Coordinated interviews and manager training.
+  \end{itemize}
+\end{resumeentry}
+```
+
+The three arguments are role, organization and period; organization and period
+can be empty. Use `\url{https://example.com/long-path}` for a displayed URL in
+body text, so it can wrap. A `\href{...}{label}` uses ordinary text line breaks
+for its label. Arbitrary unbreakable boxes such as `\mbox` and `\inlinecode`
+remain unbreakable; shorten or split their content if needed.
+
+The build stops at LaTeX errors and missing hyphenation patterns. To diagnose
+text extending beyond the right margin in a particular result, run:
+
+```sh
+make check-pdf PDF=pdf/my-resume.pdf
+```
+
+This check requires PyMuPDF and reports the page, offending text, and overflow
+in PDF points. It does not replace visual review of the PDF.
+
 ### Yandex internship resume
 
 [Short Russian resume focused on my Yandex internship](pdf/short-yandex.pdf) · [LaTeX source](tex/short-yandex.tex). Uses the short resume layout with a `#fc3e1c` accent stripe.
@@ -137,7 +175,7 @@ the packages used by this template:
 
 ```sh
 tlmgr install latexmk babel-english babel-russian hyphen-russian cyrillic lh cm-super fontawesome \
-  tcolorbox listings tikzfill textpos enumitem wrapfig fancyhdr eso-pic grfext
+  tcolorbox listings tikzfill textpos enumitem wrapfig fancyhdr eso-pic grfext needspace xurl
 ```
 
 A user-local TinyTeX installation can live in `~/Library/TinyTeX`, with command
@@ -152,7 +190,10 @@ missing patterns.
 PyMuPDF (`python3 -m pip install pymupdf`). It compiles fixtures with portrait
 and landscape images, different sizes and page geometry, replaced and omitted
 photos, and a second page. It checks alignment, aspect ratios and unchanged
-text positions. It also checks the right text margin in `pdf/short-yandex.pdf`;
+text positions. Profile tests also cover both languages, optional fields,
+colors, density, long headings and URLs, photo clearance and page boundaries.
+Set `CV_TEST_ARTIFACTS=/absolute/path` when running `make test` to retain profile
+fixture PDFs for visual review. It also checks the right text margin in `pdf/short-yandex.pdf`;
 run `make build` first to check the current sources.
 
 To compare all resumes against PDFs built before a layout change, keep a copy

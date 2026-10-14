@@ -28,3 +28,5 @@
 !images/yandex-mark.pdf
 
 !images/blog-logo.pdf
+
+__pycache__/
